@@ -1,0 +1,43 @@
+@use "sass:math";
+@import "../../../assets/styles/mixin.scss";
+@import "../../../assets/styles/alias.scss";
+
+.heading {
+  font-family: "Gilroy-ExtraBold", $ff-default;
+}
+
+.title {
+  font-weight: 700;
+  @include clamp-fontsize(math.div(48rem, 16), math.div(24rem, 16), 20rem);
+  line-height: math.div(58, 48);
+
+  display: flex;
+  gap: rem(28);
+  @media (max-width: $md+em) {
+  	gap: rem(10);
+  }
+  &:not(:last-child) {
+     margin-bottom: em(5, 48);
+  }
+}
+
+.star {
+  display: flex;
+  @media (max-width: $sm+em) {
+    & svg {
+      width: rem(21);
+      height: rem(21);
+    }
+  }
+}
+
+.text {
+  font-weight: 400;
+  font-size: rem(18);
+  line-height: math.div(23, 18);
+  letter-spacing: 0.065em;
+  text-transform: lowercase;
+  @media (max-width: $md+em) {
+    font-size: rem(14);
+  }
+}

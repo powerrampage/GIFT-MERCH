@@ -1,0 +1,74 @@
+@use "sass:math";
+@import "../mixin.scss";
+
+.main {
+
+  // .main__creative
+  &__creative {}
+}
+
+.creative {
+  padding: rem(77) 0;
+  background: url('../../images/creative/bg.png') 0 0 no-repeat;
+  background-size: cover;
+
+  // .creative__container
+  &__container {}
+
+  // .creative__inner
+  &__inner {
+    display: flex;
+    align-items: center;
+    @media (max-width: $sm+em) {
+      flex-direction: column;
+      row-gap: rem(33);
+    }
+  }
+
+  // .left-creative__logo
+  &__logo {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: em(9.69, 69.726);
+    }
+    @media (max-width: $md+em) {
+      width: rem(156);
+      height: rem(45);
+      margin: 0 auto;
+    }
+  }
+
+  // .creative__left
+  &__left {
+    @media (max-width: $sm+em) {
+      text-align: center;
+    }
+  }
+
+  // .creative__buttons
+  &__buttons {
+    &:not(:first-child) {
+      margin-top: em(44, 16);
+    }
+    display: flex;
+    align-items: center;
+    gap: rem(29);
+    @media (max-width: $sm+em) {
+      flex-direction: column;
+      gap: rem(10);
+      &:not(:first-child) {
+        margin-top: rem(25);
+      }
+    }
+  }
+
+  // .creative__right
+  &__right {
+
+  }
+}
+
+.left-creative {}
+
+.right-creative {}

@@ -1,0 +1,21 @@
+@import "../../../App.scss";
+
+.button {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: rem(18.4167);
+  cursor: pointer;
+  color: #fff;
+  border-radius: rem(90);
+  padding: rem(23.47) rem(62);
+  background-color: var(--success);
+  @media (any-hover: hover) {
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1);
+    &:hover {
+      box-shadow: 0 rem(6) rem(25) rgba(121, 129, 173, 0.45);
+    }
+  }
+  @media (max-width: 93.75em){
+    padding: rem(15) rem(25);
+  }
+}

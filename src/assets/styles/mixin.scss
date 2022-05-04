@@ -1,0 +1,103 @@
+@use "sass:math";
+@import "./alias.scss";
+// Percent
+@function percent($px, $from) {
+	$result: math.div($px, $from) * 100%;
+	@return $result;
+}
+
+// REM
+@function rem($px) {
+	$result: math.div($px, 16) + rem;
+	@return $result;
+}
+
+// EM
+/*   em(margin, font-size)
+font-size: rem(24);
+margin-right: em(10,24);
+*/
+@function em($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@mixin adaptive($property, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+
+  $startSize: math.div($startSize, 16);
+  $minSize: math.div($minSize, 16);
+
+  @if $type==1 {
+    #{$property}: $startSize + rem;
+    @media (max-width: #{$container + em}) {
+      #{$property}: calc(
+        #{$minSize + rem} + #{$addSize} *
+          ((100vw - 20em) / #{$container * 16 - 320})
+      );
+    }
+  } @else if $type==2 {
+    #{$property}: $startSize + rem;
+    @media (min-width: #{$container + em}) {
+      #{$property}: calc(
+        #{$minSize + rem} + #{$addSize} * ((100vw - 20em) / #{$maxWidth - 320})
+      );
+    }
+  } @else {
+    #{$property}: calc(
+      #{$minSize + rem} + #{$addSize} * ((100vw - 20em) / #{$maxWidth - 320})
+    );
+  }
+}
+
+@mixin bg-url($url, $urlFormat, $format: true) {
+  background-image: url("../img/" + $url + "." + $urlFormat);
+  @if $format {
+    .webp & {
+      background-image: url("../img/" + $url + ".webp");
+      @media (max-width: 30em) {
+        background-image: url("../img/" + $url + "-sm.webp");
+      }
+    }
+    .avif & {
+      background-image: url("../img/" + $url + ".avif");
+    }
+  }
+}
+
+@mixin clamp-fontsize($max-value, $min-value, $min-vw) {
+  $factor: math.div(1, ($container - $min-vw)) * ($max-value - $min-value);
+  $calc-value: unquote(
+    "#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }"
+  );
+
+  font-size: clamp(
+    #{if($min-value > $max-value, $max-value, $min-value)},
+    #{$calc-value},
+    #{if($min-value > $max-value, $min-value, $max-value)}
+  );
+}
+
+@mixin clamp($attribute, $max-value, $min-value, $min-vw) {
+  $factor: math.div(1, ($container - $min-vw)) * ($max-value - $min-value);
+  $calc-value: unquote(
+    "#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }"
+  );
+
+  #{$attribute}: clamp(
+    #{if($min-value > $max-value, $max-value, $min-value)},
+    #{$calc-value},
+    #{if($min-value > $max-value, $min-value, $max-value)}
+  );
+}

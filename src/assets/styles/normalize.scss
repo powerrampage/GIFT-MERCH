@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+head {
+  display: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  background-color: transparent;
+  &:visited,
+  &:hover {
+    text-decoration: none;
+  }
+}
+nav,
+footer,
+header,
+aside,
+main,
+article,
+figcaption,
+figure,
+menu,
+section {
+  display: block;
+}
+input::-ms-clear {
+  display: none;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+  background-color: transparent;
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+input,
+select {
+  vertical-align: middle;
+}
+textarea {
+  resize: vertical;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+a,
+label,
+button {
+  cursor: pointer;
+  color: inherit;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+}
+input[type="search"] {
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1.15;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+// role=heading |  aria-level=""
+h1 {
+  font-size: 2em;
+  line-height: 1.25;
+}
+h2 {
+  font-size: 1.5em;
+  line-height: 1.15384615;
+}
+h3 {
+  font-size: 1.17em;
+  line-height: 1.13636364;
+}
+h4 {
+  font-size: 1em;
+  line-height: 1.11111111;
+}
+h5 {
+  font-size: 0.83em;
+  line-height: 1.25;
+}
+h6 {
+  font-size: 0.67em;
+  line-height: 1.25;
+}
+
+hr {
+  // role=separator
+  display: block;
+  box-sizing: content-box;
+  border-top: 0.0625rem solid #ccc;
+  border-bottom: 0.0625rem solid #ccc;
+  margin: 1em 0;
+  overflow: visible;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+small {
+  font-size: 80%;
+}
+
+[hidden] {
+  display: none;
+}

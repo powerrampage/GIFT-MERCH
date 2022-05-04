@@ -1,0 +1,54 @@
+@use "sass:math";
+
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("./assets/fonts/Gilroy-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  font-display: swap;
+  src: url("./assets/fonts/Gilroy-Extrabold.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+// utilize
+@import "./assets/styles/normalize.scss";
+@import "./assets/styles/mixin.scss";
+@import "./assets/styles/alias.scss";
+
+// layout
+@import "./assets/styles/layout/header.scss";
+
+body {
+  font-family: "Gilroy", $ff-default;
+  color: #222227;
+  &.active {
+    overflow: hidden;
+    background-color: #A090A2;
+
+  }
+}
+
+// :focus {
+//   outline: rem(2) solid rgb(95, 183, 255);
+// }
+
+#root {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow-x: hidden;
+}
+
+[class*="__container"] {
+  max-width: $container + 1.872rem;
+  margin: 0 auto;
+  padding: 0 clamp(0.624rem, 0.5105454545rem + 0.5672727273vw, 0.936rem);
+  @include adaptive("padding-inline", 14.976, 9.984, 1);
+}
+
