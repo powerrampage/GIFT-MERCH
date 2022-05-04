@@ -4,11 +4,9 @@ import { Heading } from "../UI/Heading/heading";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import 'swiper/css';
-// import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import "../../assets/styles/layout/finished.scss"
 import { ReactComponent as ArrowSlider } from "../../assets/icons/slider-arrow.svg";
-import { SwiperParams } from "../types/swiper.type";
 
 export const Finished = () => {
 
@@ -25,7 +23,7 @@ export const Finished = () => {
 
   const onBeforeInit = (Swiper: SwiperCore): void => {
     if (typeof Swiper.params.navigation !== 'boolean') {
-      const navigation: SwiperParams | any = Swiper.params.navigation;
+      const navigation: any = Swiper.params.navigation;
       navigation.prevEl = navigationPrev.current;
       navigation.nextEl = navigationNext.current;
     }

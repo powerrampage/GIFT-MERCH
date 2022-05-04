@@ -71,15 +71,25 @@
   &__slider {
     display: flex;
     align-items: center;
-    max-width: rem(688.81 + 58 + 30.19);
+    column-gap: rem(30);
+
+    @media (max-width: $lg+em) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
   }
 }
 
 .slider-finished {
+  .swiper {
+    max-width: rem(688.81);
+    @media (max-width: $md+em) {
+      @include clamp("max-width", math.div(1200rem, 16), math.div(286rem, 16), 20rem);
+    }
+  }
 
   // .slider-finished__ctrl
   &__ctrl {
-    width: rem(58);
     display: flex;
     align-items: center;
 
