@@ -1,19 +1,26 @@
 import { useRef } from "react";
-import sweaterMockup from "../../assets/images/finished/sweater-mockup.jpg";
-import { Heading } from "../UI/Heading/heading";
+import { Link } from "react-router-dom";
+// Swiper Slider
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
+// Component UI
+import { Heading } from "../UI/Heading/heading";
+// Styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import "../../assets/styles/layout/finished.scss"
+// Images & Icons
+import sweaterMockup from "../../assets/images/finished/sweater-mockup.jpg";
 import { ReactComponent as ArrowSlider } from "../../assets/icons/slider-arrow.svg";
 
 export const Finished = () => {
 
   const slidersNum: Array<number> = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2];
   const sliderItems = slidersNum.map((n) =>
-    <SwiperSlide className="slide-item" key={Math.random()}>
-      <img loading="lazy" decoding="async" src={require(`../../assets/images/finished/slider/0${n}.png`)} width="133" height="133" alt="Примеры" />
+    <SwiperSlide key={Math.random()}>
+      <Link to="/">
+        <img loading="lazy" decoding="async" src={require(`../../assets/images/finished/slider/0${n}.png`)} width="133" height="133" alt="Примеры" />
+      </Link>
     </SwiperSlide>
   );
 
@@ -45,8 +52,8 @@ export const Finished = () => {
             <div className="finished__slider slider-finished">
               <Swiper
                 onBeforeInit={onBeforeInit}
+                speed={400}
                 modules={[Navigation, Pagination]}
-                watchOverflow={true}
                 navigation={{
                   prevEl: navigationPrev.current,
                   nextEl: navigationNext.current,
