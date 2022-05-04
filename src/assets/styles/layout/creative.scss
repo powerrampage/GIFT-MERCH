@@ -1,12 +1,6 @@
 @use "sass:math";
 @import "../mixin.scss";
 
-.main {
-
-  // .main__creative
-  &__creative {}
-}
-
 .creative {
   padding: rem(77) 0;
   background: url('../../images/creative/bg.png') 0 0 no-repeat;

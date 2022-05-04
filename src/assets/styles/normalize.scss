@@ -54,6 +54,9 @@ button,
 select {
   text-transform: none;
 }
+button {
+  line-height: 0;
+}
 input,
 select {
   vertical-align: middle;
@@ -102,7 +105,6 @@ body {
   font-weight: normal;
   letter-spacing: normal;
 
-  text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
 }

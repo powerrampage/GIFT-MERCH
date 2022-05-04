@@ -1,0 +1,120 @@
+@use "sass:math";
+@import "../alias.scss";
+@import "../mixin.scss";
+
+
+.finished {
+  padding: rem(100) 0;
+
+  // .finished__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(450), 1fr));
+    align-items: center;
+    column-gap: rem(39);
+    row-gap: rem(24);
+
+    @media (max-width: $lg+em) {
+      column-gap: rem(20);
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // .finished__left
+  &__left {
+    position: relative;
+
+    & img {
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      border-radius: rem(15);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: rem(-50);
+      left: rem(-78);
+      @include clamp("width", math.div(285rem, 16), math.div(184rem, 16), 20rem);
+      @include clamp("height", math.div(285rem, 16), math.div(184rem, 16), 20rem);
+      border-radius: 50%;
+      background: #EEF1F6;
+      box-shadow: 0px 16.0566px 20.0707px -4.01414px rgba(26, 32, 44, 0.1), 0px 8.02828px 8.02828px -4.01414px rgba(26, 32, 44, 0.04);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: rem(-32);
+      right: rem(-32);
+      @include clamp("width", math.div(101rem, 16), math.div(56rem, 16), 20rem);
+      @include clamp("height", math.div(101rem, 16), math.div(56rem, 16), 20rem);
+      background: #EEF1F6;
+      border-radius: 50%;
+      box-shadow: 0px 16.0566px 20.0707px -4.01414px rgba(26, 32, 44, 0.1), 0px 8.02828px 8.02828px -4.01414px rgba(26, 32, 44, 0.04);
+    }
+  }
+
+  // .finished__right
+  &__right {
+    &>*:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+
+    & h1 {
+      @include clamp-fontsize(math.div(36rem, 16), math.div(20rem, 16), 20rem);
+    }
+  }
+
+  // .finished__slider
+  &__slider {
+    display: flex;
+    align-items: center;
+    max-width: rem(688.81 + 58 + 30.19);
+  }
+}
+
+.slider-finished {
+
+  // .slider-finished__ctrl
+  &__ctrl {
+    width: rem(58);
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    gap: rem(2);
+  }
+
+  & button {
+    padding: rem(10);
+    line-height: 0;
+  }
+
+  & button[disabled] {
+    & path {
+      stroke: rgb(205, 205, 205);
+    }
+  }
+
+  & span {
+    color: var(--violet);
+  }
+
+  // .slider-finished__navigation
+  &__navigation {
+
+    // .slider-finished__navigation_prev
+    &_prev {}
+
+    // .slider-finished__navigation_next
+    &_next {
+      transform: rotate(180deg);
+    }
+  }
+}

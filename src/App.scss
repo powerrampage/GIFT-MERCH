@@ -52,3 +52,13 @@ body {
   @include adaptive("padding-inline", 14.976, 9.984, 1);
 }
 
+.main {
+  // .main__popular
+  &__popular {}
+
+  // .main__finished
+  &__finished {}
+
+  // .main__creative
+  &__creative {}
+}
