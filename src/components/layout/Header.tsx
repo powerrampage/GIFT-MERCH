@@ -79,7 +79,7 @@ export const Header = () => {
         >
           <div className="top-header__container">
             <div className="top-header__inner">
-              <Link to="/" className="header__logo">
+              <Link to="/" className="header__logo logo">
                 GIFTS & MERCH
               </Link>
 

@@ -1,0 +1,50 @@
+@use "sass:math";
+@import "../alias.scss";
+@import "../mixin.scss";
+
+.cooperates {
+  padding: rem(50) 0 rem(100) 0;
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-wrapper {
+    // attribute / max-value / min-value / min-vw
+    @include clamp("width", math.div(1427rem, 16), math.div(270rem, 16), 20rem);
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    background: #ECE7F0;
+    width: rem(40);
+    height: rem(40);
+    border-radius: 50%;
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: url('../../icons/slider-arrow.svg');
+      position: absolute;
+      line-height: 0;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0 !important;
+  }
+
+  .swiper-button-next {
+    right: 0 !important;
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+
+  // .cooperates__slider
+  &__slider {
+    margin-top: rem(75);
+    @media (max-width: $md+em) {
+      margin-top: rem(30);
+    }
+  }
+}

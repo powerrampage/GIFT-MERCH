@@ -1,0 +1,107 @@
+@use "sass:math";
+@import "../alias.scss";
+@import "../mixin.scss";
+
+.idea {
+  padding: rem(20) 0 rem(100) 0;
+  background: url('../../images/idea/bg.png') center center no-repeat;
+  background-size: cover;
+
+  // .idea__inner
+  &__inner {}
+
+  // .idea__top
+  &__top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &>* {
+      flex: 0 1 50%;
+    }
+
+    @media (max-width: $md+em) {
+      &:not(:last-child) {
+        margin-bottom: em(25, 18);
+      }
+    }
+
+    @media (max-width: $sm+em) {
+      flex-direction: column-reverse;
+      gap: rem(25);
+    }
+  }
+
+  // .idea__rocket
+  &__rocket {
+    position: absolute;
+
+    // .idea__rocket_1
+    &_1 {
+      bottom: rem(-12);
+      left: rem(-12);
+
+      @media (max-width: $sm+em) {
+        top: rem(-50);
+        left: rem(0);
+      }
+    }
+
+    // .idea__rocket_2
+    &_2 {
+      top: 0;
+      right: rem(-5);
+
+      @media (max-width: $lg+em) {
+        top: rem(-50);
+      }
+    }
+  }
+
+  // .idea__picture
+  &__picture {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  // .idea__bottom
+  &__bottom {
+    @media (max-width: $md+em) {
+      display: flex;
+      align-items: center;
+      gap: rem(25);
+
+      &>* {
+        flex: 1 1 50%;
+      }
+    }
+
+    @media (max-width: $sm+em) {
+      gap: rem(0);
+
+      & .idea__latter {
+        max-width: 100%;
+      }
+
+      & form {
+        width: 100%;
+      }
+
+      flex-direction: column;
+    }
+  }
+
+  // .idea__latter
+  &__latter {
+    max-width: rem(518);
+    font-weight: 600;
+    font-size: rem(24);
+    line-height: math.div(29, 24);
+
+    &:not(:last-child) {
+      margin-bottom: em(27, 24);
+    }
+  }
+}

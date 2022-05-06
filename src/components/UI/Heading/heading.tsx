@@ -3,7 +3,7 @@ import { ReactComponent as Star } from "../../../assets/icons/heading-star.svg";
 
 type HeadingProps = {
   title: string,
-  text: string,
+  text?: string,
   star?: boolean
 }
 

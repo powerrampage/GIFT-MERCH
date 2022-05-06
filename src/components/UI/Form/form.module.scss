@@ -1,0 +1,79 @@
+@import '../../../assets/styles/mixin.scss';
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // flex-wrap: wrap;
+  gap: rem(40);
+
+  &.active {
+    gap: rem(30);
+    flex-direction: column;
+    & button {
+      width: 100%;
+    }
+  }
+
+  &>button {
+    & span {
+      padding-inline: rem(80);
+      width: 100%;
+    }
+    @media (max-width: $lg+em) {
+      & span {
+        padding-inline: rem(25);
+        padding-block: rem(20);
+      }
+    }
+
+    @media (max-width: $md+em) {
+      & span,
+      & {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: $lg+em) {
+    gap: rem(20);
+  }
+
+  @media (max-width: $md+em) {
+    flex-direction: column;
+  }
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(34);
+  flex: 1 1 auto;
+  &.active {
+    width: 100%;
+    flex-direction: column;
+    & input {
+      flex: 0 1 auto;
+      width: 100%;
+    }
+  }
+  & input {
+    flex: 0 1 rem(336);
+
+    @media (max-width: $md+em) {
+      width: 100%;
+      flex: 0 1 auto;
+    }
+  }
+
+  @media (max-width: $lg+em) {
+    width: 100%;
+    gap: rem(18);
+  }
+
+  @media (max-width: $md+em) {
+    flex-direction: column;
+    flex: 0 1 auto;
+  }
+}

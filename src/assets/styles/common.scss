@@ -1,0 +1,23 @@
+@use "sass:math";
+@import "./alias.scss";
+@import "./mixin.scss";
+
+.logo {
+  font-family: "Gilroy-ExtraBold", $ff-default;
+  font-size: rem(40);
+  @include clamp-fontsize(math.div(40rem, 16), math.div(16rem, 16), 20rem);
+  letter-spacing: 0.4em;
+  font-weight: 900;
+
+  @media (max-width: $xl+em) {
+    letter-spacing: 0.1em;
+  }
+
+  @media (max-width: $md+em) {
+    flex: 1 1 auto;
+  }
+
+  & img {
+    height: 100%;
+  }
+}
