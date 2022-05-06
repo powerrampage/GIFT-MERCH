@@ -9,6 +9,7 @@ import { ReactComponent as SearchBaseIcon } from "../../assets/icons/search-base
 import { ReactComponent as CloseIcon } from "../../assets/icons/times-circle.svg";
 import { Button } from "../UI/Button/Button";
 import { isMobile } from "react-device-detect";
+import "../../assets/styles/layout/header.scss"
 
 export const Header = () => {
   // BURGER

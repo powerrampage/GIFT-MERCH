@@ -22,7 +22,6 @@
 @import "./assets/styles/alias.scss";
 
 // layout
-@import "./assets/styles/layout/header.scss";
 @import "./assets/styles/common.scss";
 
 body {
@@ -56,19 +55,38 @@ body {
 }
 
 .main {
-
   // .main__popular
-  &__popular {}
-
-  // .main__finished
-  &__finished {}
+  &__popular {
+    @media (max-width: $md+em) {
+      padding-bottom: rem(40) !important;
+    }
+  }
 
   // .main__creative
-  &__creative {}
+  &__creative {
+    @media (max-width: $md+em) {
+      padding: rem(40) 0 !important;
+    }
+  }
+
+  // .main__finished
+  &__finished {
+    @media (max-width: $md+em) {
+      padding: rem(30) 0 !important;
+    }
+  }
 
   // .main__idea
-  &__idea {}
+  &__idea {
+    @media (max-width: $md+em) {
+      padding-bottom: rem(25) !important;
+    }
+  }
 
   // .main__cooperates
-  &__cooperates {}
+  &__cooperates {
+    @media (max-width: $md+em) {
+      padding: rem(25) 0 !important;
+    }
+  }
 }
