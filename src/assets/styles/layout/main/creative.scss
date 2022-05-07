@@ -1,9 +1,9 @@
 @use "sass:math";
-@import "../mixin.scss";
+@import "../../mixin.scss";
 
 .creative {
   padding: rem(77) 0;
-  background: url('../../images/creative/bg.png') 0 0 no-repeat;
+  background: url('../../../images/Main/creative/bg.png') 0 0 no-repeat;
   background-size: cover;
 
   // .creative__container

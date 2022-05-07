@@ -1,11 +1,12 @@
 @use "sass:math";
-@import "../mixin.scss";
+@import "../../mixin.scss";
+@import "../../alias.scss";
 
 .popular {
   position: relative;
   margin-top: rem(-50);
   padding: rem(65) 0 rem(100) 0;
-  background: transparent url('../../images/popular/bg.png') right top no-repeat;
+  background: transparent url('../../../images/Main/popular/bg.png') right top no-repeat;
   background-size: cover;
   background-blend-mode: color;
 
@@ -28,6 +29,7 @@
 
     &:hover {
       color: var(--success);
+
       & svg {
         transform: translate(rem(5));
       }
@@ -64,11 +66,12 @@
     transition: 0.2s cubic-bezier(0.4, 0, 1, 1);
     overflow: hidden;
 
-    &:hover {
-      transform: scale(101.5%);
+    &:hover img {
+      transform: scale(1.15);
     }
 
     & img {
+      transition: transform 0.4s ease 0s;
       object-fit: cover;
       width: 100%;
       height: 100%;
@@ -120,6 +123,7 @@
 @keyframes scaleBasket {
   from {
     transform: scale(1.1);
+
     @media (max-width: $md+em) {
       transform: scale(1.01);
     }
@@ -127,6 +131,7 @@
 
   to {
     transform: scale(1.2);
+
     @media (max-width: $md+em) {
       transform: scale(1.05);
     }

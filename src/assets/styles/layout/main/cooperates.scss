@@ -1,6 +1,6 @@
 @use "sass:math";
-@import "../alias.scss";
-@import "../mixin.scss";
+@import "../../alias.scss";
+@import "../../mixin.scss";
 
 .cooperates {
   padding: rem(50) 0 rem(100) 0;
@@ -23,7 +23,7 @@
     }
 
     &::before {
-      content: url('../../icons/slider-arrow.svg');
+      content: url('../../../icons/slider-arrow.svg');
       position: absolute;
       line-height: 0;
     }

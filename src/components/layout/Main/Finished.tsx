@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 // Component UI
-import { Heading } from "../UI/Heading/heading";
+import { Heading } from "../../UI/Heading/heading";
 // Styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import "../../assets/styles/layout/finished.scss"
+import "../../../assets/styles/layout/main/finished.scss"
 // Images & Icons
-import sweaterMockup from "../../assets/images/finished/sweater-mockup.jpg";
-import { ReactComponent as ArrowSlider } from "../../assets/icons/slider-arrow.svg";
+import sweaterMockup from "../../../assets/images/Main/finished/sweater-mockup.jpg";
+import { ReactComponent as ArrowSlider } from "../../../assets/icons/slider-arrow.svg";
 
 export const Finished = () => {
 
@@ -19,7 +19,7 @@ export const Finished = () => {
   const sliderItems = slidersNum.map((n) =>
     <SwiperSlide key={Math.random()}>
       <Link to="/">
-        <img loading="lazy" decoding="async" src={require(`../../assets/images/finished/slider/0${n}.png`)} width="133" height="133" alt="Примеры" />
+        <img loading="lazy" decoding="async" src={require(`../../../assets/images/Main/finished/slider/0${n}.png`)} width="133" height="133" alt="Примеры" />
       </Link>
     </SwiperSlide>
   );

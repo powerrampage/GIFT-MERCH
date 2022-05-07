@@ -1,0 +1,41 @@
+@use "sass:math";
+@import "../alias.scss";
+@import "../mixin.scss";
+
+.main {
+
+  // .main__popular
+  &__popular {
+    @media (max-width: $md+em) {
+      padding-bottom: rem(40) !important;
+    }
+  }
+
+  // .main__creative
+  &__creative {
+    @media (max-width: $md+em) {
+      padding: rem(40) 0 !important;
+    }
+  }
+
+  // .main__finished
+  &__finished {
+    @media (max-width: $md+em) {
+      padding: rem(30) 0 !important;
+    }
+  }
+
+  // .main__idea
+  &__idea {
+    @media (max-width: $md+em) {
+      padding-bottom: rem(25) !important;
+    }
+  }
+
+  // .main__cooperates
+  &__cooperates {
+    @media (max-width: $md+em) {
+      padding: rem(25) 0 !important;
+    }
+  }
+}

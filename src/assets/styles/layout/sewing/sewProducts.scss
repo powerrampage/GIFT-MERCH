@@ -1,0 +1,61 @@
+@use "sass:math";
+@import "../../alias.scss";
+@import "../../mixin.scss";
+
+.sewProducts {
+  padding: math.div(97, 32)+rem 0;
+
+  // .sewProducts__inner
+  &__inner {
+    margin-top: rem(30);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
+    @include clamp("column-gap", math.div(30rem, 16), math.div(10rem, 16), 20rem);
+    row-gap: rem(30);
+    @media (max-width: $md+em) {
+      grid-template-columns: repeat(auto-fit, minmax(rem(230), 1fr));
+    }
+    @media (max-width: $sm+em) {
+      grid-template-columns: repeat(auto-fit, minmax(rem(120), 1fr));
+    }
+    @media (max-width: $xs+em) {
+      margin-top: rem(15);
+      row-gap: rem(20);
+    }
+  }
+
+  // .sewProducts__product
+  &__product {
+    text-align: center;
+  }
+}
+
+.product-sewProducts {
+
+  // .product-sewProducts__img
+  &__img {
+    overflow: hidden;
+
+
+    & img {
+      width: 100%;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 1, 1);
+    }
+
+    &:hover img {
+      transform: scale(1.2);
+    }
+  }
+
+  // .product-sewProducts__caption
+  &__caption {
+    margin-top: em(15, 24);
+    font-weight: 600;
+    font-size: rem(24);
+    line-height: math.div(25, 24);
+    @media (max-width: $md+em) {
+      font-size: rem(16);
+      margin-top: em(10, 24);
+    }
+  }
+}

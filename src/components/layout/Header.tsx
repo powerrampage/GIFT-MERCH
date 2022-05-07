@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Routes, Route, Link, NavLink } from "react-router-dom";
-// import logo from "../../assets/images/logo.png";
-import preferenceLogo from "../../assets/images/header/preference.png";
-import heroImage1 from "../../assets/images/header/hero/01.png";
+import { Button } from "../UI/Button/Button";
+import { isMobile } from "react-device-detect";
+import "../../assets/styles/layout/header.scss"
+// ICONS
 import { ReactComponent as SearchIcon } from "../../assets/icons/search.svg";
 import { ReactComponent as UserIcon } from "../../assets/icons/user.svg";
 import { ReactComponent as SearchBaseIcon } from "../../assets/icons/search-base.svg";
 import { ReactComponent as CloseIcon } from "../../assets/icons/times-circle.svg";
-import { Button } from "../UI/Button/Button";
-import { isMobile } from "react-device-detect";
-import "../../assets/styles/layout/header.scss"
+// IMAGES
+import preferenceLogo from "../../assets/images/header/preference.png";
+import heroImage1 from "../../assets/images/header/hero/01.png";
+import heroImage2 from "../../assets/images/header/hero/02.png";
 
 export const Header = () => {
   // BURGER
@@ -23,7 +25,7 @@ export const Header = () => {
   const handleHeaderNavigation = (e: React.MouseEvent<HTMLDivElement>) => {
     e.stopPropagation()
   }
-  if(isMenuActive) {
+  if (isMenuActive) {
     document.body.addEventListener("click", () => {
       setMenuActive(false);
       document.body.classList.remove('active')
@@ -63,14 +65,12 @@ export const Header = () => {
 
   const [headerScroll, setHeaderScroll] = useState<boolean>(false);
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () =>
-        setHeaderScroll(window.pageYOffset > 50)
-      );
-    }
+    window.addEventListener("scroll", () =>
+      setHeaderScroll(window.pageYOffset > 50)
+    );
   }, []);
   const headerAddBg: React.CSSProperties = {
-      background: isMenuActive ? "#A79EA7" : "",
+    background: isMenuActive ? "#A79EA7" : "",
   };
   return (
     <header className="header" ref={header} style={headerAddBg}>
@@ -85,9 +85,8 @@ export const Header = () => {
               </Link>
 
               <form
-                className={`header__form search-header${
-                  searchBarActive ? " active" : ""
-                }`}
+                className={`header__form search-header${searchBarActive ? " active" : ""
+                  }`}
                 action="#"
                 method="get"
               >
@@ -110,9 +109,8 @@ export const Header = () => {
                 <button
                   type="reset"
                   onClick={() => handleSearch()}
-                  className={`search-header__back${
-                    searchBarActive ? " active" : ""
-                  }`}
+                  className={`search-header__back${searchBarActive ? " active" : ""
+                    }`}
                 >
                   <CloseIcon />
                 </button>
@@ -157,11 +155,10 @@ export const Header = () => {
         </div>
         <div
           onClick={(e) => handleHeaderNavigation(e)}
-          className={`header__navigation navigation-header${
-            isMenuActive ? " active" : ""
-          }`}
+          className={`header__navigation navigation-header${isMenuActive ? " active" : ""
+            }`}
         >
-          {isMenuActive ?  <button onClick={handleBurger} type="button" style={{position: "absolute", top: "1rem", right: "1rem"}}><CloseIcon width={30} height={30}/></button> : null}
+          {isMenuActive ? <button onClick={handleBurger} type="button" style={{ position: "absolute", top: "1rem", right: "1rem" }}><CloseIcon width={30} height={30} /></button> : null}
           <div className="navigation-header__container">
             <div className="navigation-header__inner">
               <nav className="header__menu menu-header">
@@ -175,13 +172,12 @@ export const Header = () => {
                     className="menu-header__toSub"
                     onClick={(e) => handleSubmenu(e)}
                   >
-                    <NavLink to="/" className="menu-header__link">
+                    <NavLink to="/goods" className="menu-header__link">
                       Все товары
                     </NavLink>
                     <ul
-                      className={`menu-header__submenu submenu${
-                        isSubmenuActive ? " active" : ""
-                      }`}
+                      className={`menu-header__submenu submenu${isSubmenuActive ? " active" : ""
+                        }`}
                     >
                       <li>
                         <NavLink to="/" className="submenu__link">
@@ -195,11 +191,10 @@ export const Header = () => {
                         <div className="submenu__link">Сумки и аксессуары</div>
                         <ul
                           onClick={() => setSubmenuActive(!isSubmenuActive)}
-                          className={`submenu__inside inside-submenu${
-                            isSubmenuActive && isSubmenuInsideActive
-                              ? " active"
-                              : ""
-                          }`}
+                          className={`submenu__inside inside-submenu${isSubmenuActive && isSubmenuInsideActive
+                            ? " active"
+                            : ""
+                            }`}
                         >
                           <li>
                             <NavLink to="/" className="submenu__link">
@@ -283,17 +278,17 @@ export const Header = () => {
                   </li>
 
                   <li>
-                    <NavLink to="/b" className="menu-header__link">
+                    <NavLink to="/sewing" className="menu-header__link">
                       Пошив
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/c" className="menu-header__link">
+                    <NavLink to="/production" className="menu-header__link">
                       Производство
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/d" className="menu-header__link">
+                    <NavLink to="/information" className="menu-header__link">
                       Информация
                     </NavLink>
                   </li>
@@ -371,6 +366,34 @@ export const Header = () => {
                         src={heroImage1}
                         width="785"
                         height="610"
+                        alt="heroImage"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </section>
+            }
+          ></Route>
+          <Route path="sewing/*"
+            element={
+              <section className="header__hero hero-header hero-header_sec">
+                <div className="hero-header__container">
+                  <div className="hero-header__inner">
+                    <div className="hero-header__left hero-header__left_sec">
+                      <h1 className="hero-header__title">
+                        Современный мерч создает современные бренды
+                      </h1>
+                      <p className="hero-header__text">
+                        Почему? Потому что это ощутимо и это волнует. Это вовлекает, повышает осведомленность и вызывает эмоции. Наша команда всегда погружается в концепт заказа для того, чтобы предложить вам лучшее решение, при этом оптимизировать затраты. У нас широкий ассортимент  готовых моделей, так же изготовим любую продукцию по Вашему дизайну.
+                      </p>
+                    </div>
+                    <div className="hero-header__right">
+                      <img
+                        loading="lazy"
+                        decoding="async"
+                        src={heroImage2}
+                        width="500"
+                        height="300"
                         alt="heroImage"
                       />
                     </div>

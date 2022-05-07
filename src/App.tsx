@@ -1,25 +1,24 @@
 import "./App.scss";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+// Header / Footer
 import { Header } from "./components/layout/Header";
-import { MostPopular } from "./components/layout/MostPopular";
-import { Creative } from "./components/layout/Creative";
-import { Finished } from "./components/layout/Finished";
-import { Idea } from "./components/layout/Idea";
-import { Cooperates } from "./components/layout/Cooperates";
 import { Footer } from "./components/layout/Footer";
-
+// Pages
+import { Main } from "./pages/Main";
+import { Sewing } from "./pages/Sewing";
+import { Internal } from "./pages/Internal";
+import { Goods } from "./pages/Goods";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main className="main">
-        <MostPopular />
-        <Creative />
-        <Finished />
-        <Idea />
-        <Cooperates />
-      </main>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/sewing" element={<Sewing />} />
+        <Route path="/sewing/internal" element={<Internal />} />
+        <Route path="/goods" element={<Goods />} />
+      </Routes>
       <Footer />
     </BrowserRouter>
   );

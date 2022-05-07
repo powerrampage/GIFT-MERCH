@@ -1,0 +1,62 @@
+@use "sass:math";
+@import "../alias.scss";
+@import "../mixin.scss";
+
+.sewing {
+
+  // .sewing__sewProducts
+  &__sewProducts {
+    @media (max-width: $sm+em) {
+      padding: rem(30) 0 !important;
+    }
+    @media (max-width: $xs+em) {
+      padding: rem(20) 0 !important;
+    }
+  }
+
+  // .sewing__info
+  &__info {
+    @media (max-width: $sm+em) {
+      padding: rem(15) 0 rem(30) 0 !important;
+    }
+  }
+}
+
+.info-sewing {
+  padding: math.div(100, 32)+rem 0;
+
+  // .info-sewing__inner
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(340), 1fr));
+    column-gap: rem(75);
+    row-gap: rem(40);
+
+    @media (max-width: $md+em) {
+      column-gap: rem(50);
+      row-gap: rem(20);
+    }
+    @media (max-width: $xs+em) {
+      grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+    }
+  }
+
+  // .info-sewing__item
+  &__item {}
+
+  // .info-sewing__title
+  &__title {
+    @include clamp-fontsize(math.div(36rem, 16), math.div(25rem, 16), 20rem);
+    line-height: math.div(47, 36);
+    font-weight: 600;
+
+    &:not(:last-child) {
+      margin-bottom: em(10, 36);
+    }
+  }
+
+  // .info-sewing__text
+  &__text {
+    color: #454747;
+  }
+}

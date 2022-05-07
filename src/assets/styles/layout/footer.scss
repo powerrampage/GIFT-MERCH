@@ -82,6 +82,7 @@
     @media (max-width: $lg+em) {
       max-width: rem(450);
     }
+
     @media (max-width: $xs+em) {
       margin-top: rem(11);
       font-size: rem(15);
@@ -173,6 +174,14 @@
 
     & a {
       text-decoration: underline;
+
+      @media (any-hover: hover) {
+        transition: text-decoration 0.2s cubic-bezier(0.4, 0, 1, 1);
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
     }
 
     @media (max-width: $xs+em) {

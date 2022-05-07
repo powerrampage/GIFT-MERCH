@@ -466,6 +466,35 @@
 .hero-header {
   margin-top: rem(10);
 
+  &_sec {
+    @media (max-width: $md+em) {
+      padding: 3rem 0 2rem 0;
+    }
+
+    @media (max-width: $xs+em) {
+      padding: 1.5rem 0 2rem 0;
+    }
+    @media (max-width: 23em){
+      padding-top: 0.5rem;
+    }
+
+    .hero-header__right {
+      @media (max-width: $md+em) {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        width: rem(253);
+        height: rem(260);
+        right: rem(-90);
+        bottom: rem(-30);
+      }
+
+
+      @media (max-width: $xs+em) {
+        // right: 0;
+        // height: 60%;
+      }
+    }
+  }
+
   @media (max-width: $xl+em) {
     margin-top: rem(25);
   }
@@ -492,6 +521,23 @@
         margin-bottom: rem(5);
       }
     }
+
+    &_sec {
+      @media (max-width: $lg+em) {
+        max-width: 28rem;
+      }
+
+      @media (max-width: 38.6875em) {
+        position: relative;
+        z-index: 2;
+      }
+
+      &>* {
+        @media (max-width: 37.5em) {
+          color: #fff;
+        }
+      }
+    }
   }
 
   &__right {
@@ -499,9 +545,6 @@
     display: flex;
     justify-content: flex-end;
 
-    //@include clamp("width", math.div(785rem, 16), math.div(290rem, 16), 20rem);
-    //@include clamp("height", math.div(610rem, 16), math.div(387rem, 16), 20rem);
-    // background: url('../../images/header/hero/01.png');
     @media (max-width: $md+em) {
       position: absolute;
       width: 230px;
@@ -541,7 +584,6 @@
     letter-spacing: 0.04em;
 
     @media (max-width: $xl+em) and (min-width: $md+em) {
-      // add min-width
       font-size: rem(32);
     }
   }

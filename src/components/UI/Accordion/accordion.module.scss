@@ -1,0 +1,56 @@
+@use "sass:math";
+@import '../../../assets/styles/mixin.scss';
+
+.accordion {
+  & > *:not(:last-child) {
+    margin-bottom: rem(30);
+  }
+}
+
+.item {
+  border-bottom: rem(8) solid #F1F0F8;
+}
+
+.title {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(20);
+  padding: rem(15) 0;
+
+  & h1 {
+    font-weight: 600;
+    @include clamp-fontsize(math.div(36rem, 16), math.div(24rem, 16), 20rem);
+    line-height: math.div(47, 36);
+  }
+
+  &.active {
+    .arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.arrow {
+  transition: transform 0.4s ease 0s;
+  line-height: 0;
+}
+
+.content {
+  padding-bottom: rem(25);
+  font-size: rem(16);
+  line-height: math.div(21, 16);
+  color: #454747;
+  & > p {
+    white-space: pre-line;
+  }
+}
+
+.list {
+  margin: 0.3em 0;
+  list-style: disc;
+  & li {
+    margin-left: rem(25);
+  }
+}

@@ -1,8 +1,8 @@
-import logo from "../../assets/images/creative/creative-logo.png";
-import photoImage from "../../assets/images/creative/photo.png";
-import { Button } from "../UI/Button/Button";
-import { Heading } from "../UI/Heading/heading";
-import "../../assets/styles/layout/creative.scss"
+import logo from "../../../assets/images/Main/creative/creative-logo.png";
+import photoImage from "../../../assets/images/Main/creative/photo.png";
+import { Button } from "../../UI/Button/Button";
+import { Heading } from "../../UI/Heading/heading";
+import "../../../assets/styles/layout/main/creative.scss"
 
 
 export const Creative = () => {

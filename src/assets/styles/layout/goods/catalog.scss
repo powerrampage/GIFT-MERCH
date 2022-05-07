@@ -1,0 +1,96 @@
+@use "sass:math";
+@import "../../alias.scss";
+@import "../../mixin.scss";
+
+
+.catalog {
+  padding: rem(50) 0;
+
+  // .catalog__body
+  &__body {}
+
+  // .catalog__filter
+  &__filter {}
+}
+
+.filter {
+  &__hr {
+    display: inline-block;
+    height: rem(8);
+    background: #F2F1F8;
+    width: 100%;
+  }
+
+  // .filter__list
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  // .filter__item
+  &__item {
+    flex: 1 1 auto;
+    cursor: pointer;
+    padding: rem(14) rem(16);
+    color: #8E8E8E;
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: math.div(19, 18);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: var(--main-black);
+      color: #fff;
+      border-radius: rem(6);
+    }
+
+    & * {
+      color: #fff;
+    }
+  }
+
+  &__hoodies {
+    position: relative;
+
+    &:hover .filter__subList {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  // .filter__subList
+  &__subList {
+    z-index: 6;
+    transition: all 0.4s ease 0s;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: var(--main-black);
+    top: 94%;
+    left: 0;
+    max-width: 100%;
+    padding: rem(12) rem(8);
+  }
+}
+
+.subList-filter {
+
+  // .subList-filter__item
+  &__item {
+    padding: rem(6) rem(5);
+    font-size: rem(16);
+    line-height: math.div(19, 16);
+    transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+    border-radius: rem(6);
+
+    &:not(:last-child) {
+      margin-bottom: em(16, 16);
+    }
+
+    &:hover {
+      background-color: #fff;
+      color: var(--main-black);
+    }
+  }
+}
