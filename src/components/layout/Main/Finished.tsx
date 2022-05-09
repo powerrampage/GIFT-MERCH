@@ -52,8 +52,8 @@ export const Finished = () => {
             <div className="finished__slider slider-finished">
               <Swiper
                 onBeforeInit={onBeforeInit}
-                speed={400}
                 modules={[Navigation, Pagination]}
+                speed={400}
                 navigation={{
                   prevEl: navigationPrev.current,
                   nextEl: navigationNext.current,

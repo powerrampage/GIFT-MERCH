@@ -1,21 +1,141 @@
+@use "sass:math";
+@import '../../../assets/styles/mixin.scss';
+
 .product {
-  width: 378px; // ----------------------------------------------------
+  border-radius: rem(15);
+  background: #FFFFFF;
 }
+
 .image {
+  padding: rem(20) rem(45) rem(40) rem(20);
+  background-color: #F1F1F8;
+  text-align: center;
+  position: relative;
+  border-top-left-radius: rem(15);
+  border-top-right-radius: rem(15);
 }
+
+.favorite {
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+  right: rem(15);
+  top: rem(12);
+}
+
 .caption {
+  padding: rem(15) rem(18);
 }
+
 .description {
+  margin-bottom: rem(15);
 }
+
 .title {
+  cursor: pointer;
+  font-weight: 600;
+  @include clamp-fontsize(math.div(24rem, 16), math.div(17.7778rem, 16), 20rem);
+  line-height: math.div(25, 24);
+
+  &:not(:last-child) {
+    margin-bottom: em(12, 24);
+  }
+
+  transition: color 0.4s ease 0s;
+
+  &:hover {
+    color: var(--violet);
+  }
 }
+
 .text {
+  max-width: rem(223);
+  @include clamp-fontsize(math.div(12rem, 16), math.div(8.88889rem, 16), 20rem);
+  line-height: math.div(13, 12);
 }
+
+.colors {
+  display: flex;
+  align-items: center;
+  gap: rem(4.5);
+  margin-bottom: rem(30);
+}
+
 .color {
+  cursor: pointer;
+  width: rem(24);
+  height: rem(24);
+  border-radius: 50%;
 }
+
 .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .price {
+  font-weight: 600;
+  font-size: rem(24);
+  line-height: math.div(25, 24);
+  color: #C4C4C4;
 }
+
 .basket {
+  cursor: pointer;
+
+  & svg {
+    font-size: rem(45.43);
+    width: rem(45.43);
+    height: rem(45.98);
+  }
+
+  & path {
+    fill: #272525;
+  }
 }
+
+.slider {}
+
+.sliderControl {
+  position: absolute;
+  bottom: rem(13);
+  right: rem(13);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+}
+
+.navigationNext,
+.navigationPrev {
+  padding: 0 rem(10);
+
+  &[disabled] {
+    & path {
+      stroke: rgb(205, 205, 205);
+    }
+  }
+}
+
+.navigationNext {
+  transform: rotate(180deg);
+}
+
+.pagination {}
+
+.fraction {
+  display: flex;
+  align-items: center;
+  gap: rem(2.5);
+
+  &>* {
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: math.div(17, 16);
+    color: var(--violet);
+  }
+}
+
+.fractionCurrent {}
+
+.fractionAll {}

@@ -5,9 +5,9 @@
     "price": "$76.43",
     "favorite": false,
     "colors": [
-      "purple",
-      "green",
-      "white"
+      "#524983",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/purple.png",
@@ -21,9 +21,9 @@
     "price": "$56.43",
     "favorite": true,
     "colors": [
-      "white",
-      "cyan",
-      "black"
+      "#F1F1F1",
+      "#9ED1E1",
+      "#2A292F"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png",
@@ -37,9 +37,9 @@
     "price": "$69.21",
     "favorite": false,
     "colors": [
-      "green",
-      "cyan",
-      "blue"
+      "#309F85",
+      "#9ED1E1",
+      "#3F28BC"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
@@ -53,13 +53,13 @@
     "price": "$94.05",
     "favorite": false,
     "colors": [
-      "orange",
-      "voilet",
-      "black"
+      "#EEAB5D",
+      "#9787EA",
+      "#2A292F"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/orange.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
+      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/violet.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png"
     ]
   },
@@ -69,9 +69,9 @@
     "price": "$80.00",
     "favorite": false,
     "colors": [
-      "blue",
-      "green",
-      "white"
+      "#3F28BC",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/blue.png",
@@ -85,12 +85,12 @@
     "price": "$77.22",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
+      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/violet.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png"
     ]
@@ -101,9 +101,9 @@
     "price": "$65.50",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
@@ -117,9 +117,9 @@
     "price": "$100.25",
     "favorite": false,
     "colors": [
-      "black",
-      "blue",
-      "green"
+      "#2A292F",
+      "#3F28BC",
+      "#309F85"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png",
@@ -133,9 +133,9 @@
     "price": "$76.43",
     "favorite": false,
     "colors": [
-      "purple",
-      "green",
-      "white"
+      "#524983",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/purple.png",
@@ -149,9 +149,9 @@
     "price": "$56.43",
     "favorite": true,
     "colors": [
-      "white",
-      "cyan",
-      "black"
+      "#F1F1F1",
+      "#9ED1E1",
+      "#2A292F"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png",
@@ -165,9 +165,9 @@
     "price": "$69.21",
     "favorite": false,
     "colors": [
-      "green",
-      "cyan",
-      "blue"
+      "#309F85",
+      "#9ED1E1",
+      "#3F28BC"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
@@ -181,13 +181,13 @@
     "price": "$94.05",
     "favorite": false,
     "colors": [
-      "orange",
-      "voilet",
-      "black"
+      "#EEAB5D",
+      "#9787EA",
+      "#2A292F"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/orange.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
+      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/violet.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png"
     ]
   },
@@ -197,9 +197,9 @@
     "price": "$80.00",
     "favorite": false,
     "colors": [
-      "blue",
-      "green",
-      "white"
+      "#3F28BC",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/blue.png",
@@ -213,12 +213,12 @@
     "price": "$77.22",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
+      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/violet.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png"
     ]
@@ -229,9 +229,9 @@
     "price": "$65.50",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
@@ -245,9 +245,9 @@
     "price": "$100.25",
     "favorite": false,
     "colors": [
-      "black",
-      "blue",
-      "green"
+      "#2A292F",
+      "#3F28BC",
+      "#309F85"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png",
@@ -261,9 +261,9 @@
     "price": "$65.50",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
@@ -277,9 +277,9 @@
     "price": "$100.25",
     "favorite": false,
     "colors": [
-      "black",
-      "blue",
-      "green"
+      "#2A292F",
+      "#3F28BC",
+      "#309F85"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png",
@@ -293,9 +293,9 @@
     "price": "$76.43",
     "favorite": false,
     "colors": [
-      "purple",
-      "green",
-      "white"
+      "#524983",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/purple.png",
@@ -309,9 +309,9 @@
     "price": "$56.43",
     "favorite": true,
     "colors": [
-      "white",
-      "cyan",
-      "black"
+      "#F1F1F1",
+      "#9ED1E1",
+      "#2A292F"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png",
@@ -325,9 +325,9 @@
     "price": "$69.21",
     "favorite": false,
     "colors": [
-      "green",
-      "cyan",
-      "blue"
+      "#309F85",
+      "#9ED1E1",
+      "#3F28BC"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
@@ -341,13 +341,13 @@
     "price": "$94.05",
     "favorite": false,
     "colors": [
-      "orange",
-      "voilet",
-      "black"
+      "#EEAB5D",
+      "#9787EA",
+      "#2A292F"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/orange.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
+      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/violet.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png"
     ]
   },
@@ -357,9 +357,9 @@
     "price": "$80.00",
     "favorite": false,
     "colors": [
-      "blue",
-      "green",
-      "white"
+      "#3F28BC",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/blue.png",
@@ -373,12 +373,12 @@
     "price": "$77.22",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
+      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/violet.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png"
     ]
@@ -389,9 +389,9 @@
     "price": "$65.50",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
@@ -405,9 +405,9 @@
     "price": "$100.25",
     "favorite": false,
     "colors": [
-      "black",
-      "blue",
-      "green"
+      "#2A292F",
+      "#3F28BC",
+      "#309F85"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png",
@@ -421,9 +421,9 @@
     "price": "$65.50",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
@@ -437,9 +437,9 @@
     "price": "$100.25",
     "favorite": false,
     "colors": [
-      "black",
-      "blue",
-      "green"
+      "#2A292F",
+      "#3F28BC",
+      "#309F85"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png",
@@ -453,9 +453,9 @@
     "price": "$76.43",
     "favorite": false,
     "colors": [
-      "purple",
-      "green",
-      "white"
+      "#524983",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/purple.png",
@@ -469,9 +469,9 @@
     "price": "$56.43",
     "favorite": true,
     "colors": [
-      "white",
-      "cyan",
-      "black"
+      "#F1F1F1",
+      "#9ED1E1",
+      "#2A292F"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png",
@@ -485,9 +485,9 @@
     "price": "$69.21",
     "favorite": false,
     "colors": [
-      "green",
-      "cyan",
-      "blue"
+      "#309F85",
+      "#9ED1E1",
+      "#3F28BC"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
@@ -501,13 +501,13 @@
     "price": "$94.05",
     "favorite": false,
     "colors": [
-      "orange",
-      "voilet",
-      "black"
+      "#EEAB5D",
+      "#9787EA",
+      "#2A292F"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/orange.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
+      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/violet.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png"
     ]
   },
@@ -517,9 +517,9 @@
     "price": "$80.00",
     "favorite": false,
     "colors": [
-      "blue",
-      "green",
-      "white"
+      "#3F28BC",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/blue.png",
@@ -533,12 +533,12 @@
     "price": "$77.22",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
+      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/violet.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png"
     ]
@@ -549,9 +549,9 @@
     "price": "$65.50",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
@@ -565,9 +565,9 @@
     "price": "$100.25",
     "favorite": false,
     "colors": [
-      "black",
-      "blue",
-      "green"
+      "#2A292F",
+      "#3F28BC",
+      "#309F85"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png",
@@ -581,9 +581,9 @@
     "price": "$65.50",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
@@ -597,9 +597,9 @@
     "price": "$100.25",
     "favorite": false,
     "colors": [
-      "black",
-      "blue",
-      "green"
+      "#2A292F",
+      "#3F28BC",
+      "#309F85"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png",
@@ -613,9 +613,9 @@
     "price": "$76.43",
     "favorite": false,
     "colors": [
-      "purple",
-      "green",
-      "white"
+      "#524983",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/purple.png",
@@ -629,9 +629,9 @@
     "price": "$56.43",
     "favorite": true,
     "colors": [
-      "white",
-      "cyan",
-      "black"
+      "#F1F1F1",
+      "#9ED1E1",
+      "#2A292F"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png",
@@ -645,9 +645,9 @@
     "price": "$69.21",
     "favorite": false,
     "colors": [
-      "green",
-      "cyan",
-      "blue"
+      "#309F85",
+      "#9ED1E1",
+      "#3F28BC"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
@@ -661,13 +661,13 @@
     "price": "$94.05",
     "favorite": false,
     "colors": [
-      "orange",
-      "voilet",
-      "black"
+      "#EEAB5D",
+      "#9787EA",
+      "#2A292F"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/orange.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
+      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/violet.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png"
     ]
   },
@@ -677,9 +677,9 @@
     "price": "$80.00",
     "favorite": false,
     "colors": [
-      "blue",
-      "green",
-      "white"
+      "#3F28BC",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/blue.png",
@@ -693,12 +693,12 @@
     "price": "$77.22",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
+      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/violet.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png"
     ]
@@ -709,9 +709,9 @@
     "price": "$65.50",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
@@ -725,9 +725,9 @@
     "price": "$100.25",
     "favorite": false,
     "colors": [
-      "black",
-      "blue",
-      "green"
+      "#2A292F",
+      "#3F28BC",
+      "#309F85"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png",
@@ -741,9 +741,9 @@
     "price": "$65.50",
     "favorite": false,
     "colors": [
-      "voilet",
-      "green",
-      "white"
+      "#9787EA",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
@@ -757,9 +757,9 @@
     "price": "$100.25",
     "favorite": false,
     "colors": [
-      "black",
-      "blue",
-      "green"
+      "#2A292F",
+      "#3F28BC",
+      "#309F85"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png",
@@ -773,9 +773,9 @@
     "price": "$76.43",
     "favorite": false,
     "colors": [
-      "purple",
-      "green",
-      "white"
+      "#524983",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/purple.png",
@@ -789,9 +789,9 @@
     "price": "$56.43",
     "favorite": true,
     "colors": [
-      "white",
-      "cyan",
-      "black"
+      "#F1F1F1",
+      "#9ED1E1",
+      "#2A292F"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png",
@@ -805,9 +805,9 @@
     "price": "$69.21",
     "favorite": false,
     "colors": [
-      "green",
-      "cyan",
-      "blue"
+      "#309F85",
+      "#9ED1E1",
+      "#3F28BC"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
@@ -821,13 +821,13 @@
     "price": "$94.05",
     "favorite": false,
     "colors": [
-      "orange",
-      "voilet",
-      "black"
+      "#EEAB5D",
+      "#9787EA",
+      "#2A292F"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/orange.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
+      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/violet.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png"
     ]
   },
@@ -837,222 +837,14 @@
     "price": "$80.00",
     "favorite": false,
     "colors": [
-      "blue",
-      "green",
-      "white"
+      "#3F28BC",
+      "#309F85",
+      "#F1F1F1"
     ],
     "images": [
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/blue.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
       "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png"
-    ]
-  },
-  {
-    "title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "text": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "price": "$77.22",
-    "favorite": false,
-    "colors": [
-      "voilet",
-      "green",
-      "white"
-    ],
-    "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png"
-    ]
-  },
-  {
-    "title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "text": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "price": "$65.50",
-    "favorite": false,
-    "colors": [
-      "voilet",
-      "green",
-      "white"
-    ],
-    "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/orange.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png"
-    ]
-  },
-  {
-    "title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "text": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "price": "$100.25",
-    "favorite": false,
-    "colors": [
-      "black",
-      "blue",
-      "green"
-    ],
-    "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/blue.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png"
-    ]
-  },
-  {
-    "title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "text": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "price": "$65.50",
-    "favorite": false,
-    "colors": [
-      "voilet",
-      "green",
-      "white"
-    ],
-    "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/orange.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png"
-    ]
-  },
-  {
-    "title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "text": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "price": "$100.25",
-    "favorite": false,
-    "colors": [
-      "black",
-      "blue",
-      "green"
-    ],
-    "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/blue.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png"
-    ]
-  },
-  {
-    "title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "text": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "price": "$76.43",
-    "favorite": false,
-    "colors": [
-      "purple",
-      "green",
-      "white"
-    ],
-    "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/purple.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png"
-    ]
-  },
-  {
-    "title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "text": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "price": "$56.43",
-    "favorite": true,
-    "colors": [
-      "white",
-      "cyan",
-      "black"
-    ],
-    "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png"
-    ]
-  },
-  {
-    "title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "text": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "price": "$69.21",
-    "favorite": false,
-    "colors": [
-      "green",
-      "cyan",
-      "blue"
-    ],
-    "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/blue.png"
-    ]
-  },
-  {
-    "title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "text": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "price": "$94.05",
-    "favorite": false,
-    "colors": [
-      "orange",
-      "voilet",
-      "black"
-    ],
-    "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/orange.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png"
-    ]
-  },
-  {
-    "title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "text": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "price": "$80.00",
-    "favorite": false,
-    "colors": [
-      "blue",
-      "green",
-      "white"
-    ],
-    "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/blue.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png"
-    ]
-  },
-  {
-    "title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "text": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "price": "$77.22",
-    "favorite": false,
-    "colors": [
-      "voilet",
-      "green",
-      "white"
-    ],
-    "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/voilet.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png"
-    ]
-  },
-  {
-    "title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "text": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "price": "$65.50",
-    "favorite": false,
-    "colors": [
-      "voilet",
-      "green",
-      "white"
-    ],
-    "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/cyan.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/orange.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/white.png"
-    ]
-  },
-  {
-    "title": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "text": "EL003 Elleven Checkpoint-Friendly Compu-Backpack",
-    "price": "$100.25",
-    "favorite": false,
-    "colors": [
-      "black",
-      "blue",
-      "green"
-    ],
-    "images": [
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/black.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/blue.png",
-      "https://raw.githubusercontent.com/powerrampage/productsJson/main/images/green.png"
     ]
   }
 ]
