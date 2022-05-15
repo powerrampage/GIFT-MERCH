@@ -1,0 +1,34 @@
+@use "sass:math";
+@import "../../alias.scss";
+@import "../../mixin.scss";
+
+.readyKits {
+  padding: rem(35) 0;
+
+  // .readyKits__inner
+  &__inner {
+    margin-top: rem(40);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
+    gap: rem(28);
+
+    @media (max-width: $md+em) {
+      grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+      gap: rem(15);
+    }
+
+    @media (max-width: $sm+em) {
+      margin-top: rem(12.5);
+    }
+
+    .product {
+      &>*:first-child {
+        padding: 0;
+
+        & img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

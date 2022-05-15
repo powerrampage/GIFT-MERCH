@@ -1,10 +1,9 @@
 import style from "./heading.module.scss"
-import { ReactComponent as Star } from "../../../assets/icons/heading-star.svg";
 
 type HeadingProps = {
   title: string,
   text?: string,
-  star?: boolean
+  star?: React.ReactElement
 }
 
 export const Heading = ({title, text, star}: HeadingProps) => {
@@ -12,9 +11,9 @@ export const Heading = ({title, text, star}: HeadingProps) => {
     <div className={style.heading}>
       <h1 className={style.title}>
         {title}
-        {star ? <span className={style.star}><Star/></span> : null}
+        {star ? <span className={style.star}>{star}</span> : null}
       </h1>
-      <p className={style.text}>{text}</p>
+      {text ? <p className={style.text}>{text}</p>: null}
     </div>
   )
 }

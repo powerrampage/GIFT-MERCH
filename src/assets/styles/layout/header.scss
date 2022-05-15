@@ -466,6 +466,28 @@
 .hero-header {
   margin-top: rem(10);
 
+  &__additional {
+    margin: rem(35) 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(10);
+
+    & p {
+      color: #3C336C;
+      font-weight: 600;
+      font-size: rem(18);
+      line-height: math.div(19, 18);
+    }
+
+    @media (max-width: $xs+em) {
+      flex-direction: column;
+
+      & p {
+        color: #fff;
+      }
+    }
+  }
+
   &_sec {
     @media (max-width: $md+em) {
       padding: 3rem 0 2rem 0;
@@ -474,7 +496,8 @@
     @media (max-width: $xs+em) {
       padding: 1.5rem 0 2rem 0;
     }
-    @media (max-width: 23em){
+
+    @media (max-width: 23em) {
       padding-top: 0.5rem;
     }
 
@@ -485,12 +508,6 @@
         height: rem(260);
         right: rem(-90);
         bottom: rem(-30);
-      }
-
-
-      @media (max-width: $xs+em) {
-        // right: 0;
-        // height: 60%;
       }
     }
   }
@@ -566,7 +583,7 @@
 
     & img {
       height: 100%;
-      object-fit: cover;
+      // object-fit: cover;
 
       @media (max-width: 42.8125em) {
         object-fit: fill;

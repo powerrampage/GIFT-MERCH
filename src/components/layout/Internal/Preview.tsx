@@ -6,6 +6,7 @@ type AccordionDataType = {
     text: string
     list?: Array<string>
   }
+  active?: boolean
 }[]
 
 const accordionData: AccordionDataType = [
@@ -14,14 +15,16 @@ const accordionData: AccordionDataType = [
     content: {
       text: "Вы можете заказать у нас пошив толстовок из любого вида материалов: ",
       list: ["Хлопок 100%", "Хлопок/полиэстер 85/15%", "Флис"]
-    }
+    },
+    active: true
   },
   {
     title: 'Виды нанесения',
     content: {
       text: "Вы можете заказать у нас пошив толстовок из любого вида материалов: ",
       list: ["Шелкография", "Вышивка", "Цифровая печать", "Флекс"]
-    }
+    },
+    active: true
   },
   {
     title: 'Уход за товаром',
@@ -31,7 +34,8 @@ const accordionData: AccordionDataType = [
         — Перед глажкой и стиркой желательно вывернуть изделие наизнанку. //
         — Стирка в прохладной воде не выше 30°С без включения режима сушки //
       `
-    }
+    },
+    active: true
   }
 ];
 
@@ -41,8 +45,8 @@ export const Preview = () => {
       <div className="preview__container">
         <div className="preview__inner">
           <div className="preview__collapse">
-            {accordionData.map(({ title, content }):  React.ReactNode => {
-              return <Accordion title={title} content={content} key={Math.random() * 9.7} />
+            {accordionData.map(({ title, content, active }):  React.ReactNode => {
+              return <Accordion title={title} content={content} active={active} key={Math.random() * 9.7} />
             })}
           </div>
           <div className="preview__photo">

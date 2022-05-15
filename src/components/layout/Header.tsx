@@ -12,6 +12,7 @@ import { ReactComponent as CloseIcon } from "../../assets/icons/times-circle.svg
 import preferenceLogo from "../../assets/images/header/preference.png";
 import heroImage1 from "../../assets/images/header/hero/01.png";
 import heroImage2 from "../../assets/images/header/hero/02.png";
+import heroImage3 from "../../assets/images/header/hero/03.png";
 
 export const Header = () => {
   // BURGER
@@ -164,7 +165,7 @@ export const Header = () => {
               <nav className="header__menu menu-header">
                 <ul className="menu-header__list">
                   <li>
-                    <NavLink to="/a" className="menu-header__link">
+                    <NavLink to="/sets" className="menu-header__link">
                       Наборы
                     </NavLink>
                   </li>
@@ -374,7 +375,7 @@ export const Header = () => {
               </section>
             }
           ></Route>
-          <Route path="sewing/*"
+          <Route path="*"
             element={
               <section className="header__hero hero-header hero-header_sec">
                 <div className="hero-header__container">
@@ -388,14 +389,29 @@ export const Header = () => {
                       </p>
                     </div>
                     <div className="hero-header__right">
-                      <img
-                        loading="lazy"
-                        decoding="async"
-                        src={heroImage2}
-                        width="500"
-                        height="300"
-                        alt="heroImage"
-                      />
+                      <img loading="lazy" decoding="async" src={heroImage2} width="500" height="300" alt="heroImage" />
+                    </div>
+                  </div>
+                </div>
+              </section>
+            }
+          ></Route>
+          <Route path="/information"
+            element={
+              <section className="header__hero hero-header hero-header_sec">
+                <div className="hero-header__container">
+                  <div className="hero-header__inner">
+                    <div className="hero-header__left hero-header__left_sec">
+                      <h1 className="hero-header__title">КТо такие gifst & merch?</h1>
+                      <p className="hero-header__text">Merchy&nbsp;&mdash; это команда гуру творчества, со&nbsp;своей экспертностью в&nbsp;корпоратином сегменте. Мы&nbsp;знаем как волнителен, чаще стрессовый бывает заказ брендированной продукции и&nbsp;корпоративных подарков, потому, что были по&nbsp;обе стороны заказа. Это нам позволило изучить проблематики бизнесов и&nbsp;представить лучшие и&nbsp;современые решения для наших клиентов</p>
+                      <div className="hero-header__additional">
+                        <p>Часто задаваемые вопросы</p>
+                        <p>Контакты</p>
+                        <p>Связаться с нами</p>
+                      </div>
+                    </div>
+                    <div className="hero-header__right">
+                      <img loading="lazy" decoding="async" src={heroImage3} width="500" height="300" alt="heroImage" />
                     </div>
                   </div>
                 </div>

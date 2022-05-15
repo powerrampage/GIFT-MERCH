@@ -3,6 +3,11 @@
 @import "../mixin.scss";
 
 .goods {
+
   // .goods__catalog
-  &__catalog {}
+  &__catalog {
+    @media (max-width: $md+em) {
+      padding-top: rem(25);
+    }
+  }
 }

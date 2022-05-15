@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {ReactComponent as ArrowLong} from "../../../assets/icons/long-arrow.svg";
 import {ReactComponent as ShoppingBasket} from "../../../assets/icons/shopping-basket.svg";
 import "../../../assets/styles/layout/main/popular.scss"
+import { ReactComponent as Star } from "../../../assets/icons/heading-star.svg";
 
 export const MostPopular = () => {
   return (
@@ -16,7 +17,7 @@ export const MostPopular = () => {
             </div>
           </div>
           <div className="popular__header">
-            <Heading star={true} title="Самое популярное" text="Товары, которые наиболее часто заказывают наши клиенты"/>
+            <Heading star={<Star/>} title="Самое популярное" text="Товары, которые наиболее часто заказывают наши клиенты"/>
             <Link to="/21123123" className="popular__allLink">
               <h3>Все товары</h3>
               <ArrowLong/>

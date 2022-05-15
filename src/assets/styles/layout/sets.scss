@@ -1,0 +1,19 @@
+@use "sass:math";
+@import "../alias.scss";
+@import "../mixin.scss";
+
+.sets {
+  // .sets__readyKits
+  &__readyKits {
+    @media (max-width: $xs+em) {
+      padding: rem(22) 0 !important;
+    }
+  }
+
+  // .sets__info
+  &__info {
+    @media (max-width: $sm+em) {
+      padding: rem(15) 0 !important;
+    }
+  }
+}

@@ -9,10 +9,11 @@ type PropsAccordion = {
     text: string
     list?: Array<string>
   }
+  active?: boolean
 }
 
-export const Accordion = ({ title, content }: PropsAccordion) => {
-  const [isActiveAccordion, setIsActiveAccordion] = useState(true);
+export const Accordion = ({ title, content, active = false }: PropsAccordion) => {
+  const [isActiveAccordion, setIsActiveAccordion] = useState(active);
 
   return (
     <div className={style.accordion}>

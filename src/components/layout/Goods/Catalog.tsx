@@ -1,13 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Product } from '../../UI/Product/Product'
 import '../../../assets/styles/layout/goods/catalog.scss'
 import { ReactComponent as ArrowSlider } from "../../../assets/icons/slider-arrow.svg";
+import { ReactComponent as FilterIcon } from "../../../assets/icons/filter-icon.svg";
+
 
 export const Catalog = () => {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
-  const [currentPage, setCurrentPage] = useState(1)
+  let [currentPage, setCurrentPage] = useState(1)
   const [dataPerPage] = useState(8)
 
   useEffect(() => {
@@ -35,62 +37,72 @@ export const Catalog = () => {
     pageNumbers.push(i);
   }
 
-  const paginationItem = useRef(null)
-  // useEffect(() => {
-  //   if (paginationItem.current !== null) {
-  //     for (let i = 0; i < pageNumbers.length; i++) {
-  //       console.log(paginationItem.current)
-  //       // paginationItem.current[i].addEventListener("click")
-  //     }
-  //   }
-  // })
-
-
   // Change page
-  const paginate = (event: any, pageNumber: number) => {
-    event.target.classList.add("active");
+  const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber)
   };
 
+  // Pagination
   const onNext = () => {
     if (currentPage <= Math.trunc(data.length / dataPerPage)) {
       setCurrentPage(currentPage + 1);
     }
   };
-
   const onPrevious = () => {
     if (currentPage !== 1) {
-      console.log(currentPage)
       setCurrentPage(currentPage - 1);
     }
   };
+
+  // FILTER
+  const filterBtn = () => {
+    if (currentPage !== 1 || currentPage <= Math.trunc(data.length / dataPerPage)) {
+      setCurrentPage(currentPage + Math.trunc(Math.random() * 3));
+    }
+    if (currentPage > 6 && currentPage !== 1) {
+      setCurrentPage(currentPage - Math.trunc(Math.random() * 3));
+    }
+  }
+
+  const filterAllBtn = () => {
+    setCurrentPage(currentPage = 1);
+  }
+
+  const [handleFilter, setHandleFilter] = useState(false)
+  const filterIconHandler = () => {
+    setHandleFilter(!handleFilter)
+  }
 
   return (
     <section className="goods__catalog catalog">
       <div className="catalog__container">
         <div className="catalog__body">
           <div className="catalog__filter filter">
+            <button className={`filter__icon${handleFilter ? " active" : ""}`} onClick={filterIconHandler}>
+              <FilterIcon />
+              <p>Фильтр</p>
+            </button>
             <span className='filter__hr'></span>
-            <ul className="filter__list">
-              <li className="filter__item">Все товары</li>
+            <ul className={`filter__list${handleFilter ? " active" : ""}`}>
+              <li className="filter__item" onClick={filterAllBtn}>Все товары</li>
               <li className="filter__item filter__hoodies">
                 Толстовки
                 <ul className='filter__subList subList-filter'>
-                  <li className="subList-filter__item">Худи на замке</li>
-                  <li className="subList-filter__item">Худи классические</li>
-                  <li className="subList-filter__item">Худи оверсайз</li>
+                  <li className="subList-filter__item" onClick={filterBtn}>Худи на замке</li>
+                  <li className="subList-filter__item" onClick={filterBtn}>Худи классические</li>
+                  <li className="subList-filter__item" onClick={filterBtn}>Худи оверсайз</li>
                 </ul>
               </li>
-              <li className="filter__item">Свитшоты</li>
-              <li className="filter__item">Футболки</li>
-              <li className="filter__item">Поло</li>
-              <li className="filter__item">Жилетки</li>
-              <li className="filter__item">Рюкзаки</li>
-              <li className="filter__item">Бананки</li>
-              <li className="filter__item">Эко-сумки/Шопперы </li>
-              <li className="filter__item">Пледы</li>
-              <li className="filter__item">Носки</li>
-              <li className="filter__item">Маски</li>
+              <li className="filter__item" onClick={filterBtn}>Свитшоты</li>
+              <li className="filter__item" onClick={filterBtn}>Футболки</li>
+              <li className="filter__item" onClick={filterBtn}>Поло</li>
+              <li className="filter__item" onClick={filterBtn}>Жилетки</li>
+              <li className="filter__item" onClick={filterBtn}>Рюкзаки</li>
+              <li className="filter__item" onClick={filterBtn}>Бананки</li>
+              <li className="filter__item" onClick={filterBtn}>Эко-сумки/Шопперы </li>
+              <li className="filter__item" onClick={filterBtn}>Пледы</li>
+              <li className="filter__item" onClick={filterBtn}>Носки</li>
+              <li className="filter__item" onClick={filterBtn}>Маски</li>
             </ul>
           </div>
           <div className="catalog__products products-catalog">
@@ -103,11 +115,12 @@ export const Catalog = () => {
                 )
               })}
             </div>
+
             <div className="products-catalog__pagination pagination-catalog">
               <button onClick={onPrevious} className="pagination-catalog__prev"><ArrowSlider /></button>
               <ul className="pagination-catalog__list">
                 {pageNumbers.map(number => (
-                  <li key={number} ref={paginationItem} className="pagination-catalog__item" onClick={(event) => paginate(event, number)}>
+                  <li key={number} className="pagination-catalog__item" onClick={() => paginate(number)}>
                     {number}
                   </li>
                 ))}
