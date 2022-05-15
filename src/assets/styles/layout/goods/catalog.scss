@@ -78,7 +78,7 @@
     line-height: math.div(19, 18);
     transition: all 0.2s ease-in-out;
 
-    &:active,
+    &.-active,
     &:hover {
       background: var(--main-black);
       color: #fff;

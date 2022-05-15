@@ -7,6 +7,8 @@ export type ProductProps = {
     colors: ["purple" | "green" | "white" | "orange" | "blue" | "violet" | "cyan" | "black"]
     images: Array<string>
   }
+  handleAddCart?: any
+  openProduct?: any
 }
 
 export type ProductColorType = "purple" | "green" | "white" | "orange" | "blue" | "violet" | "cyan" | "black"

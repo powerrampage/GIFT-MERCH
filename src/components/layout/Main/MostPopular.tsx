@@ -18,13 +18,13 @@ export const MostPopular = () => {
           </div>
           <div className="popular__header">
             <Heading star={<Star/>} title="Самое популярное" text="Товары, которые наиболее часто заказывают наши клиенты"/>
-            <Link to="/21123123" className="popular__allLink">
+            <Link to="/goods" className="popular__allLink">
               <h3>Все товары</h3>
               <ArrowLong/>
             </Link>
           </div>
           <div className="popular__gallery gallery-popular">
-            <Link to="/asd" className="gallery-popular__item gallery-popular__item--1">
+            <Link to="/sewing" className="gallery-popular__item gallery-popular__item--1">
               <img loading="lazy" decoding="async" src={require("../../../assets/images/Main/popular/01.jpg")} width={1101}
                    height={576} alt="Самое популярное"/>
             </Link>
@@ -32,11 +32,11 @@ export const MostPopular = () => {
               <img loading="lazy" decoding="async" src={require("../../../assets/images/Main/popular/02.jpg")} width={481}
                    height={312} alt="Самое популярное"/>
             </Link>
-            <Link to="/asd" className="gallery-popular__item gallery-popular__item--3">
+            <Link to="/sewing" className="gallery-popular__item gallery-popular__item--3">
               <img loading="lazy" decoding="async" src={require("../../../assets/images/Main/popular/03.jpg")} width={236.05}
                    height={249} alt="Самое популярное"/>
             </Link>
-            <Link to="/asd" className="gallery-popular__item gallery-popular__item--4">
+            <Link to="/sewing" className="gallery-popular__item gallery-popular__item--4">
               <img loading="lazy" decoding="async" src={require("../../../assets/images/Main/popular/04.jpg")} width={236.05}
                    height={249} alt="Самое популярное"/>
             </Link>

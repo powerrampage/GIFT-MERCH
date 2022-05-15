@@ -105,7 +105,9 @@
   }
 }
 
-.slider {}
+.slider {
+  cursor: pointer;
+}
 
 .sliderControl {
   position: absolute;

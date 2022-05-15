@@ -29,18 +29,18 @@ export const Footer = () => {
         <div className="footer__column">
           <ul className="footer__list">
             <h3 className="footer__title">Категории</h3>
-            <li><Link to="/" className="footer__link">Пошив</Link></li>
-            <li><Link to="/" className="footer__link">Все товары</Link></li>
-            <li><Link to="/" className="footer__link">Наборы</Link></li>
-            <li><Link to="/" className="footer__link">Производство</Link></li>
+            <li><Link to="/sewing" className="footer__link">Пошив</Link></li>
+            <li><Link to="/goods" className="footer__link">Все товары</Link></li>
+            <li><Link to="/sets" className="footer__link">Наборы</Link></li>
+            <li><Link to="/production" className="footer__link">Производство</Link></li>
           </ul>
         </div>
         <div className="footer__column">
           <ul className="footer__list">
             <h3 className="footer__title">Информация</h3>
-            <li><Link to="/" className="footer__link">О нас</Link></li>
-            <li><Link to="/" className="footer__link">ЧаВо</Link></li>
-            <li><Link to="/" className="footer__link">Контакты</Link></li>
+            <li><Link to="/information" className="footer__link">О нас</Link></li>
+            <li><Link to="/information" className="footer__link">ЧаВо</Link></li>
+            <li><Link to="/information" className="footer__link">Контакты</Link></li>
           </ul>
         </div>
         <div className="footer__column">

@@ -14,7 +14,7 @@ import { ReactComponent as ArrowSlider } from "../../../assets/icons/slider-arro
 import { ProductProps } from "./product.type";
 import { ProductColorType } from "./product.type";
 
-export const Product = ({ item }: ProductProps) => {
+export const Product = ({ item, handleAddCart, openProduct }: ProductProps) => {
   const navigationPrevProduct = useRef<HTMLButtonElement>(null)
   const navigationNextProduct = useRef<HTMLButtonElement>(null)
   const paginationLabel = useRef<HTMLDivElement>(null)
@@ -39,7 +39,6 @@ export const Product = ({ item }: ProductProps) => {
         <div className={style.slider}>
           <Swiper
             preloadImages={false}
-            lazy={true}
             onBeforeInit={onBeforeInitProduct}
             modules={[Navigation, Pagination]}
             speed={400}
@@ -53,7 +52,7 @@ export const Product = ({ item }: ProductProps) => {
           >
             {item.images.map((eachImage: string) => {
               return (
-                <SwiperSlide key={Math.random() * 91}>
+                <SwiperSlide key={Math.random() * 91} onClick={(event) => openProduct(event, item)} aria-expanded="false" aria-haspopup="true">
                   <img loading="lazy" decoding="async" src={eachImage} width="255" height="315" alt={item.title}
                   />
                 </SwiperSlide>
@@ -70,7 +69,7 @@ export const Product = ({ item }: ProductProps) => {
       </div>
       <div className={style.caption}>
         <div className={style.description}>
-          <h2 className={style.title}>{item.title}</h2>
+          <h2 className={style.title} onClick={(event) => openProduct(event, item)} aria-expanded="false" aria-haspopup="true">{item.title}</h2>
           <p className={style.text}>{item.text}</p>
         </div>
         <div className={`${style.colors} product__colors`}>
@@ -80,9 +79,9 @@ export const Product = ({ item }: ProductProps) => {
         </div>
         <div className={style.bottom}>
           <p className={style.price}>From Price {item.price}</p>
-          <div className={style.basket}><ShoppingBasket /></div>
+          <div className={style.basket} onClick={() => handleAddCart(item)}><ShoppingBasket /></div>
         </div>
       </div>
-    </article >
+    </article>
   )
 }

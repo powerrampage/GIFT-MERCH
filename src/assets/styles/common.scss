@@ -21,3 +21,45 @@
     height: 100%;
   }
 }
+
+.popup {
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: rem(40);
+    height: rem(40);
+    padding: rem(10) rem(15);
+    background: #ECE7F0;
+    border-radius: 50%;
+
+    &:after {
+      font-size: rem(20);
+      color: #7981AD;
+    }
+  }
+
+  .popup_colors__LcJoW {
+    .swiper-pagination-bullet-active {
+      background: transparent !important;
+    }
+
+    .swiper-pagination-bullet {
+      opacity: 1 !important;
+      width: rem(24);
+      height: rem(24);
+
+      &:nth-child(1) {
+        background-color: #524983 !important;
+      }
+
+      &:nth-child(2) {
+        background-color: #309F85 !important;
+      }
+
+      &:nth-child(3) {
+        background-color: #F1F1F1 !important;
+      }
+
+    }
+  }
+}

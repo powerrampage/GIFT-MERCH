@@ -103,7 +103,7 @@ export const Header = () => {
                   ref={searchInput}
                   className="search-header__input"
                   type="search"
-                  name="header-search"
+                  name="Search"
                   placeholder="Поиск"
                   aria-label="Search"
                 />

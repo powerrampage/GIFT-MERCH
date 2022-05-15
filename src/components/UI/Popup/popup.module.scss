@@ -1,0 +1,200 @@
+@use "sass:math";
+@import '../../../assets/styles/mixin.scss';
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.36);
+  z-index: 9999999999;
+  overflow: auto;
+}
+
+.dialog {
+  max-width: rem(1300);
+  margin: 4% auto;
+  min-height: rem(525);
+  background: #FAFAFA;
+  box-shadow: 0px 16.0566px 20.0707px -4.01414px rgba(26, 32, 44, 0.1), 0px 8.02828px 8.02828px -4.01414px rgba(26, 32, 44, 0.04);
+  border-radius: rem(25);
+  padding: rem(28);
+
+  display: flex;
+  gap: rem(25);
+}
+
+.left {
+  flex: 0 1 rem(500);
+}
+
+.right {
+  flex: 0 1 rem(635);
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 700;
+  @include clamp-fontsize(math.div(36rem, 16), math.div(18rem, 16), 20rem);
+  line-height: math.div(44, 36);
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-bottom: em(20, 36);
+  }
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  margin-bottom: rem(10);
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  gap: rem(4.5);
+}
+
+.color {
+  cursor: pointer;
+  width: rem(24);
+  height: rem(24);
+  border-radius: 50%;
+}
+
+.price {
+  font-size: rem(24);
+  line-height: math.div(25, 24);
+  font-weight: 600;
+}
+
+.text {
+  color: #454747;
+  @include clamp-fontsize(math.div(16rem, 16), math.div(12rem, 16), 20rem);
+  line-height: math.div(21, 16);
+
+  &:not(:last-child) {
+    margin-bottom: em(28, 16);
+  }
+}
+
+.about {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(330), 1fr));
+  gap: math.div(55, 32)+rem;
+
+  & span {
+    padding-block: rem(16);
+    max-width: rem(245);
+    text-align: center;
+  }
+}
+
+.size {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.sizeTitle {
+  font-weight: 600;
+  font-size: rem(18);
+  line-height: math.div(19, 18);
+
+  &:not(:last-child) {
+    margin-bottom: em(9, 18);
+  }
+}
+
+.sizeList {
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+  margin-bottom: rem(13);
+}
+
+.pickup {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+  transition: 0.2s cubic-bezier(0.4, 0, 1, 1);
+  margin-bottom: rem(20);
+
+  &:hover {
+    & p {
+      text-decoration: none;
+    }
+  }
+
+  & p {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: math.div(18, 14);
+    text-decoration: underline;
+    color: #524983;
+  }
+}
+
+.characteristics {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.titleChrct {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  gap: rem(25);
+
+  & h3 {
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: math.div(19, 18);
+  }
+
+  &.active {
+    .arrowChrct {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.arrowChrct {
+  transition: transform 0.4s ease 0s;
+
+  & svg {
+    width: rem(15);
+    height: rem(15);
+  }
+}
+
+.contentChrct {
+  padding: rem(2) 0;
+}
+
+.contentChrctItem {
+  padding: rem(13) 0;
+  border-bottom: rem(1) solid #524983;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.thumbs {
+  margin-top: rem(10);
+}
+
+.table {
+  align-self: flex-end;
+}
+
+.close {
+  position: absolute;
+  top: rem(9.69);
+  right: rem(9.69);
+}

@@ -3,6 +3,7 @@ import photoImage from "../../../assets/images/Main/creative/photo.png";
 import { Button } from "../../UI/Button/Button";
 import { Heading } from "../../UI/Heading/heading";
 import "../../../assets/styles/layout/main/creative.scss"
+import { Link } from "react-router-dom";
 
 
 export const Creative = () => {
@@ -16,8 +17,12 @@ export const Creative = () => {
             </div>
             <Heading title="Хотите удивить ваших коллег/партнеров необычными подарками?" text="Выбирайте готовые подарочные наборы или укажите критерии по которым мы соберем для Вас уникальный бокс." />
             <div className="creative__buttons">
-              <Button title="Перейти к наборам" bg="#272525" />
-              <Button title="Создать свой" bg="#EEF1F6" color="#272525" />
+              <Link to="/sets">
+                <Button title="Перейти к наборам" bg="#272525" />
+              </Link>
+              <Link to="/sets">
+                <Button title="Создать свой" bg="#EEF1F6" color="#272525" />
+              </Link>
             </div>
           </div>
           <div className="creative__right right-creative">

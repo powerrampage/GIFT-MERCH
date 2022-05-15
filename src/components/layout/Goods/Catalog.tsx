@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
 import { Product } from '../../UI/Product/Product'
 import '../../../assets/styles/layout/goods/catalog.scss'
 import { ReactComponent as ArrowSlider } from "../../../assets/icons/slider-arrow.svg";
 import { ReactComponent as FilterIcon } from "../../../assets/icons/filter-icon.svg";
+import { Popup } from '../../UI/Popup/Popup';
+import { itemProduct } from './catalog.type';
 
 
 export const Catalog = () => {
@@ -73,6 +75,29 @@ export const Catalog = () => {
     setHandleFilter(!handleFilter)
   }
 
+  // SET TO CART
+  // const [cart, setCart]: any = useState([])
+  // const handleAddCart = (item: any) => {
+  //   setCart([...cart, item])
+  //   // cart.push(item)
+  // }
+
+  // HANDLE_POPUP
+  const [openModel, setOpenModel] = useState(false)
+  const [popupProduct, setPopupProduct] = useState({})
+
+  const handlePopup = (event: React.MouseEvent | any, item: itemProduct) => {
+    event.target.setAttribute("aria-expanded", true)
+    setPopupProduct(item)
+    setOpenModel(true)
+    document.body.classList.add("active")
+    event.stopPropagation()
+    console.log(item)
+  }
+  window.onclick = function() {
+    setOpenModel(false)
+    document.body.classList.remove("active")
+  }
   return (
     <section className="goods__catalog catalog">
       <div className="catalog__container">
@@ -111,7 +136,7 @@ export const Catalog = () => {
                 <img loading="lazy" decoding="async" src={require("../../../assets/images/loading.gif")} width="500" height="300" alt="Loading..." />
               </div> : currentPosts.map(item => {
                 return (
-                  <Product item={item} key={Math.random() * Math.random() * 33} />
+                  <Product item={item} key={Math.random() * Math.random() * 33} openProduct={handlePopup} />
                 )
               })}
             </div>
@@ -128,6 +153,7 @@ export const Catalog = () => {
               <button onClick={onNext} className="pagination-catalog__next"><ArrowSlider /></button>
             </div>
           </div>
+          {openModel ? <Popup product={popupProduct} ariaHidden={!openModel} setOpenModel={setOpenModel} /> : null}
         </div>
       </div>
     </section>

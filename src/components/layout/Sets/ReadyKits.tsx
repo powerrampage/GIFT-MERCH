@@ -4,6 +4,8 @@ import '../../../assets/styles/layout/sets/readyKits.scss'
 import { Product } from '../../UI/Product/Product';
 import { ReactComponent as ArrowSlider } from "../../../assets/icons/slider-arrow.svg";
 import { Heading } from '../../UI/Heading/heading';
+import { Popup } from '../../UI/Popup/Popup';
+import { itemProduct } from '../Goods/catalog.type';
 
 
 export const ReadyKits = () => {
@@ -53,7 +55,21 @@ export const ReadyKits = () => {
       setCurrentPage(currentPage - 1);
     }
   };
+  // HANDLE_POPUP
+  const [openModel, setOpenModel] = useState(false)
+  const [popupProduct, setPopupProduct] = useState({})
 
+  const handlePopup = (event: React.MouseEvent | any, item: itemProduct) => {
+    event.target.setAttribute("aria-expanded", true)
+    setPopupProduct(item)
+    setOpenModel(true)
+    document.body.classList.add("active")
+    event.stopPropagation()
+  }
+  window.onclick = function() {
+    setOpenModel(false)
+    document.body.classList.remove("active")
+  }
   return (
     <section className="sets__readyKits readyKits">
       <div className="readyKits__container">
@@ -63,7 +79,7 @@ export const ReadyKits = () => {
             <img loading="lazy" decoding="async" src={require("../../../assets/images/loading.gif")} width="500" height="300" alt="Loading..." />
           </div> : currentPosts.map(item => {
             return (
-              <Product item={item} key={Math.random() * Math.random() * 47} />
+              <Product item={item} key={Math.random() * Math.random() * 47} openProduct={handlePopup} />
             )
           })}
         </div>
@@ -78,6 +94,7 @@ export const ReadyKits = () => {
           </ul>
           <button onClick={onNext} className="pagination-catalog__next"><ArrowSlider /></button>
         </div>
+        {openModel ? <Popup product={popupProduct} ariaHidden={!openModel} setOpenModel={setOpenModel} /> : null}
       </div>
     </section>
   )

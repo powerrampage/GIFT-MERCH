@@ -9,6 +9,7 @@ import { Sewing } from "./pages/Sewing";
 import { Internal } from "./pages/Internal";
 import { Goods } from "./pages/Goods";
 import { Sets } from "./pages/Sets";
+import { Production } from "./pages/Production";
 import { Information } from "./pages/Information";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/sewing/internal" element={<Internal />} />
         <Route path="/goods" element={<Goods />} />
         <Route path="/sets" element={<Sets />} />
+        <Route path="/production" element={<Production />} />
         <Route path="/information" element={<Information />} />
       </Routes>
       <Footer />
