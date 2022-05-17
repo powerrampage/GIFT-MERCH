@@ -35,9 +35,9 @@ body {
   }
 }
 
-// :focus {
-//   outline: rem(2) solid rgb(95, 183, 255);
-// }
+:focus {
+  outline: rem(2) solid rgb(95, 183, 255);
+}
 
 #root {
   min-height: 100%;

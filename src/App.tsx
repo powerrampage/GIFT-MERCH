@@ -1,5 +1,5 @@
 import "./App.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 // Header / Footer
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
@@ -14,7 +14,7 @@ import { Information } from "./pages/Information";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
@@ -26,7 +26,7 @@ function App() {
         <Route path="/information" element={<Information />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

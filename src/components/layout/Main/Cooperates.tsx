@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper';
+import { Navigation, Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Heading } from "../../UI/Heading/heading"
@@ -14,13 +14,17 @@ export const Cooperates = () => {
         <div className="cooperates__slider">
           <Swiper
             speed={400}
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
+            loop={true}
+            autoplay={true}
             navigation
             spaceBetween={0}
             slidesPerView={5}
             breakpoints={{
               300: {
-                slidesPerView: 1,
+                slidesPerView: 2,
+                spaceBetween: 25,
+                direction: "vertical"
               },
               576: {
                 slidesPerView: 2,

@@ -4,20 +4,26 @@
 
 .cooperates {
   padding: rem(50) 0 rem(100) 0;
+
   .swiper-slide {
     display: flex;
     justify-content: center;
   }
+
   .swiper-wrapper {
     // attribute / max-value / min-value / min-vw
     @include clamp("width", math.div(1427rem, 16), math.div(270rem, 16), 20rem);
   }
+
+
+
   .swiper-button-prev,
   .swiper-button-next {
     background: #ECE7F0;
     width: rem(40);
     height: rem(40);
     border-radius: 50%;
+
     &::after {
       display: none;
     }
@@ -35,6 +41,7 @@
 
   .swiper-button-next {
     right: 0 !important;
+
     &::before {
       transform: rotate(180deg);
     }
@@ -43,8 +50,46 @@
   // .cooperates__slider
   &__slider {
     margin-top: rem(75);
+
     @media (max-width: $md+em) {
       margin-top: rem(30);
+    }
+
+    @media (max-width: $sm+em) {
+      .swiper-wrapper {
+        margin: 0 auto;
+      }
+
+      .swiper {
+        height: rem(300);
+
+        .swiper-slide {
+          align-items: center !important;
+        }
+        .swiper-slide-active {
+          align-items: flex-end !important;
+        }
+        .swiper-slide-next  {
+          align-items: flex-start !important;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          left: 50%;
+          transform: rotate(90deg);
+          transform-origin: left center;
+        }
+
+        .swiper-button-prev {
+          top: 0;
+          left: 50% !important;
+        }
+
+        .swiper-button-next {
+          top: auto;
+          bottom: rem(20);
+        }
+      }
     }
   }
 }
