@@ -24,16 +24,10 @@ export const Finished = () => {
     </SwiperSlide>
   );
 
-  const navigationPrev = useRef<HTMLButtonElement>(null)
-  const navigationNext = useRef<HTMLButtonElement>(null)
+  const swiperRef = useRef(null);
   const paginationLabel = useRef<HTMLDivElement>(null)
 
   const onBeforeInit = (Swiper: SwiperCore): void => {
-    if (typeof Swiper.params.navigation !== 'boolean') {
-      const navigation: any = Swiper.params.navigation;
-      navigation.prevEl = navigationPrev.current;
-      navigation.nextEl = navigationNext.current;
-    }
     if (typeof Swiper.params.pagination !== 'boolean') {
       // @ts-ignore
       Swiper.params.pagination.el = paginationLabel.current;
@@ -51,13 +45,11 @@ export const Finished = () => {
             <Heading title="Помимо готовой продукции высокого качества, мы можем для Вас произвести одежду, аксессуры, вкусности и другое под заказ." text="Благодаря личному производству мы изготавливаем большие партии в короткие сроки, а так же у Вас всегда есть возможность кастомизировать изделия." />
             <div className="finished__slider slider-finished">
               <Swiper
+                // @ts-ignore
+                ref={swiperRef}
                 onBeforeInit={onBeforeInit}
                 modules={[Navigation, Pagination]}
                 speed={400}
-                navigation={{
-                  prevEl: navigationPrev.current,
-                  nextEl: navigationNext.current,
-                }}
                 pagination={{ type: 'fraction' }}
                 spaceBetween={25}
                 slidesPerView={4}
@@ -65,9 +57,11 @@ export const Finished = () => {
                 {sliderItems}
               </Swiper>
               <div className="slider-finished__ctrl">
-                <button className="slider-finished__navigation_prev" ref={navigationPrev}><ArrowSlider /></button>
+                {/* @ts-ignore */}
+                <button className="slider-finished__navigation_prev" onClick={() => swiperRef.current.swiper.slidePrev()}><ArrowSlider /></button>
                 <div className="slider-finished__pagination" ref={paginationLabel}></div>
-                <button className="slider-finished__navigation_next" ref={navigationNext}><ArrowSlider /></button>
+                {/* @ts-ignore */}
+                <button className="slider-finished__navigation_next" onClick={() => swiperRef.current.swiper.slideNext()}><ArrowSlider /></button>
               </div>
             </div>
           </div>
