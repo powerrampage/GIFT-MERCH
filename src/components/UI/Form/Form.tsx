@@ -1,11 +1,11 @@
+import { FC } from "react"
 import { Button } from "../Button/Button"
 import { Input } from "../Input/Input"
 import style from "./form.module.scss"
+import { FormProps } from "./form.type"
 
-type FormProps = {
-  direction: "column" | "row"
-}
-export const Form = ({ direction = "row" }: FormProps) => {
+
+export const Form: FC<FormProps> = ({ direction = "row" }: FormProps) => {
   return (
     <form className={style.form +`${direction === "column" ? ` ${style.active}` : ""}`}>
       <div className={style.inputs +`${direction === "column" ? ` ${style.active}` : ""}`}>

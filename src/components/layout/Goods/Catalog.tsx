@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, FC } from 'react'
 import axios from 'axios'
 import { Product } from '../../UI/Product/Product'
 import '../../../assets/styles/layout/goods/catalog.scss'
@@ -7,8 +7,7 @@ import { ReactComponent as FilterIcon } from "../../../assets/icons/filter-icon.
 import { Popup } from '../../UI/Popup/Popup';
 import { itemProduct } from './catalog.type';
 
-
-export const Catalog = () => {
+export const Catalog: FC = () => {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
   let [currentPage, setCurrentPage] = useState(1)
@@ -75,13 +74,6 @@ export const Catalog = () => {
     setHandleFilter(!handleFilter)
   }
 
-  // SET TO CART
-  // const [cart, setCart]: any = useState([])
-  // const handleAddCart = (item: any) => {
-  //   setCart([...cart, item])
-  //   // cart.push(item)
-  // }
-
   // HANDLE_POPUP
   const [openModel, setOpenModel] = useState(false)
   const [popupProduct, setPopupProduct] = useState({})
@@ -92,7 +84,6 @@ export const Catalog = () => {
     setOpenModel(true)
     document.body.classList.add("active")
     event.stopPropagation()
-    console.log(item)
   }
   window.onclick = function() {
     setOpenModel(false)

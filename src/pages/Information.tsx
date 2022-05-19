@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, FC } from 'react';
 import '../assets/styles/layout/information.scss'
 import { Accordion } from '../components/UI/Accordion/Accordion'
 import { Heading } from '../components/UI/Heading/heading'
@@ -6,7 +6,7 @@ import { ReactComponent as CallIcon } from "../assets/icons/call.svg";
 import { Form } from '../components/UI/Form/Form';
 
 
-export const Information = () => {
+export const Information: FC = () => {
   // FAQIMAGE CLONE
   const faqImage = useRef(null)
   const contactsInner = useRef<any>(null)

@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper';
 import 'swiper/css';
@@ -6,7 +7,7 @@ import { Heading } from "../../UI/Heading/heading"
 import "../../../assets/styles/layout/main/cooperates.scss"
 
 
-export const Cooperates = () => {
+export const Cooperates: FC = () => {
   return (
     <section className="main__cooperates cooperates">
       <div className="cooperates__container">

@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Accordion } from '../../UI/Accordion/Accordion';
 
 type AccordionDataType = {
@@ -39,7 +40,7 @@ const accordionData: AccordionDataType = [
   }
 ];
 
-export const Preview = () => {
+export const Preview: FC = () => {
   return (
     <section className="internal__preview preview">
       <div className="preview__container">

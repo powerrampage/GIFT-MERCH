@@ -1,12 +1,13 @@
+import { FC } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../../assets/images/Main/creative/creative-logo.png";
 import photoImage from "../../../assets/images/Main/creative/photo.png";
 import { Button } from "../../UI/Button/Button";
 import { Heading } from "../../UI/Heading/heading";
 import "../../../assets/styles/layout/main/creative.scss"
-import { Link } from "react-router-dom";
 
 
-export const Creative = () => {
+export const Creative: FC = () => {
   return (
     <section className="main__creative creative">
       <div className="creative__container">

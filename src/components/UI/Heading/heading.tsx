@@ -1,12 +1,10 @@
+import { FC } from "react"
 import style from "./heading.module.scss"
+import { HeadingProps } from "./heading.type"
 
-type HeadingProps = {
-  title: string,
-  text?: string,
-  star?: React.ReactElement
-}
 
-export const Heading = ({title, text, star}: HeadingProps) => {
+
+export const Heading: FC<HeadingProps> = ({title, text, star}: HeadingProps) => {
   return (
     <div className={style.heading}>
       <h1 className={style.title}>

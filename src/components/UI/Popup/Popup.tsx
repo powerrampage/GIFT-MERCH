@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { FC, useRef, useState } from "react";
 import style from "./popup.module.scss"
 import { ReactComponent as Ruler } from "../../../assets/icons/ruler.svg";
 import { Button } from "../Button/Button";
@@ -14,7 +14,7 @@ import { PopupProps } from "./popup.type";
 
 
 
-export const Popup = ({ product, ariaHidden, setOpenModel }: PopupProps) => {
+export const Popup: FC<PopupProps> = ({ product, ariaHidden, setOpenModel }: PopupProps) => {
   const [isActiveAccordion, setIsActiveAccordion] = useState(true);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 

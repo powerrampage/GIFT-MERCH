@@ -1,8 +1,9 @@
+import { FC } from "react";
 import { Link } from "react-router-dom"
 import { ReactComponent as ArrowOc } from "../../assets/icons/arrow-oc.svg";
 import "../../assets/styles/layout/footer.scss"
 
-export const Footer = () => {
+export const Footer: FC = () => {
   return (
     <footer className="footer">
       <div className="footer__container">

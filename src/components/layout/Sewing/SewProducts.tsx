@@ -1,8 +1,9 @@
+import { FC } from "react"
 import { Link } from "react-router-dom"
 import { Heading } from "../../UI/Heading/heading"
 import '../../../assets/styles/layout/sewing/sewProducts.scss'
 
-export const SewProducts = () => {
+export const SewProducts: FC = () => {
   return (
     <section className="sewing__sewProducts sewProducts">
       <div className="sewProducts__container">

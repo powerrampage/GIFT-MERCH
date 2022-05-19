@@ -1,18 +1,9 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import style from "./accordion.module.scss"
 import { ReactComponent as ArrowAccordion } from "../../../assets/icons/arrow-accordion.svg";
+import { PropsAccordion } from './accordion.type';
 
-
-type PropsAccordion = {
-  title: string
-  content: {
-    text: string
-    list?: Array<string>
-  }
-  active?: boolean
-}
-
-export const Accordion = ({ title, content, active = false }: PropsAccordion) => {
+export const Accordion: FC<PropsAccordion> = ({ title, content, active = false }: PropsAccordion) => {
   const [isActiveAccordion, setIsActiveAccordion] = useState(active);
 
   return (

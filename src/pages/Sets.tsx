@@ -1,9 +1,10 @@
+import { FC } from 'react'
 import { Creative } from '../components/layout/Main/Creative'
 import { ReadyKits } from '../components/layout/Sets/ReadyKits'
 import '../assets/styles/layout/sets.scss'
 
 
-export const Sets = () => {
+export const Sets: FC = () => {
 
   return (
     <main className="sets">

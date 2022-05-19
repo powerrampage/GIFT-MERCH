@@ -1,12 +1,10 @@
+import { FC } from "react"
 import style from "./input.module.scss"
+import { InputProps } from "./input.type"
 
-type inputProps = {
-  placeholder: string
-  type?: string
-  required?: boolean
-}
 
-export const Input = ({placeholder, type = "text", required}: inputProps) => {
+
+export const Input: FC<InputProps> = ({placeholder, type = "text", required}: InputProps) => {
   return (
     <input className={style.input} type={type} placeholder={placeholder} required={required}>
     </input>

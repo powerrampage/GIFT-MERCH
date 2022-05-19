@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { FC, PropsWithoutRef, useEffect, useRef } from 'react';
 // SWIPER
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
@@ -14,21 +14,14 @@ import { ReactComponent as ArrowSlider } from "../../../assets/icons/slider-arro
 import { ProductProps } from "./product.type";
 import { ProductColorType } from "./product.type";
 
-export const Product = ({ item, handleAddCart, openProduct }: ProductProps) => {
-  const navigationPrevProduct = useRef<HTMLButtonElement>(null)
-  const navigationNextProduct = useRef<HTMLButtonElement>(null)
+export const Product: React.FC<ProductProps> = ({ item, handleAddCart, openProduct }: ProductProps) => {
+
+  const swiperRef = useRef(null) as any;
   const paginationLabel = useRef<HTMLDivElement>(null)
 
-  const onBeforeInitProduct = (Swiper: SwiperCore): void => {
-    if (typeof Swiper.params.navigation !== 'boolean') {
-      const navigation: any = Swiper.params.navigation;
-      navigation.prevEl = navigationPrevProduct.current;
-      navigation.nextEl = navigationNextProduct.current;
-    }
-    if (typeof Swiper.params.pagination !== 'boolean') {
+  const onBeforeInitProduct = (Swiper: SwiperCore) => {
       // @ts-ignore
       Swiper.params.pagination.el = paginationLabel.current;
-    }
   };
   return (
     <article className={`${style.product} product`} key={Math.random() * 32}>
@@ -38,14 +31,12 @@ export const Product = ({ item, handleAddCart, openProduct }: ProductProps) => {
         </div> : null}
         <div className={style.slider}>
           <Swiper
+            // @ts-ignore
+            ref={swiperRef}
             preloadImages={false}
             onBeforeInit={onBeforeInitProduct}
             modules={[Navigation, Pagination]}
             speed={400}
-            navigation={{
-              prevEl: navigationPrevProduct.current,
-              nextEl: navigationNextProduct.current,
-            }}
             spaceBetween={0}
             slidesPerView="auto"
             pagination={{ type: "fraction" }}
@@ -60,10 +51,12 @@ export const Product = ({ item, handleAddCart, openProduct }: ProductProps) => {
             })}
           </Swiper>
           <div className={style.sliderControl}>
-            <button className={style.navigationPrev} ref={navigationPrevProduct}><ArrowSlider /></button>
+            {/* @ts-ignore */}
+            <button className={style.navigationPrev} onClick={() => swiperRef.current.swiper.slidePrev()}><ArrowSlider /></button>
             <div className={style.pagination} ref={paginationLabel}>
             </div>
-            <button className={style.navigationNext} ref={navigationNextProduct}><ArrowSlider /></button>
+            {/* @ts-ignore */}
+            <button className={style.navigationNext} onClick={() => swiperRef.current.swiper.slideNext()}><ArrowSlider /></button>
           </div>
         </div>
       </div>
@@ -79,7 +72,7 @@ export const Product = ({ item, handleAddCart, openProduct }: ProductProps) => {
         </div>
         <div className={style.bottom}>
           <p className={style.price}>From Price {item.price}</p>
-          <div className={style.basket} onClick={() => handleAddCart(item)}><ShoppingBasket /></div>
+          <button className={style.basket} onClick={() => handleAddCart(item)}><ShoppingBasket /></button>
         </div>
       </div>
     </article>

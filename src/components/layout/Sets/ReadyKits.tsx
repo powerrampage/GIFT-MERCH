@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, FC } from 'react'
 import axios from 'axios'
 import '../../../assets/styles/layout/sets/readyKits.scss'
 import { Product } from '../../UI/Product/Product';
@@ -8,7 +8,7 @@ import { Popup } from '../../UI/Popup/Popup';
 import { itemProduct } from '../Goods/catalog.type';
 
 
-export const ReadyKits = () => {
+export const ReadyKits: FC = () => {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
   let [currentPage, setCurrentPage] = useState(1)

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { FC, useRef } from "react";
 import { Link } from "react-router-dom";
 // Swiper Slider
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,7 +13,7 @@ import "../../../assets/styles/layout/main/finished.scss"
 import sweaterMockup from "../../../assets/images/Main/finished/sweater-mockup.jpg";
 import { ReactComponent as ArrowSlider } from "../../../assets/icons/slider-arrow.svg";
 
-export const Finished = () => {
+export const Finished: FC = () => {
 
   const slidersNum: Array<number> = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2];
   const sliderItems = slidersNum.map((n) =>

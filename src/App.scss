@@ -35,7 +35,16 @@ body {
   }
 }
 
-:focus {
+button:focus-visible {
+  outline: rem(2) solid rgb(95, 183, 255);
+}
+input:focus-visible {
+  outline: rem(2) solid rgb(95, 183, 255);
+}
+a:focus-visible {
+  outline: rem(2) solid rgb(95, 183, 255);
+}
+li:focus-visible {
   outline: rem(2) solid rgb(95, 183, 255);
 }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, FC } from "react";
 import { Routes, Route, Link, NavLink } from "react-router-dom";
 import { Button } from "../UI/Button/Button";
 import { isMobile } from "react-device-detect";
@@ -14,7 +14,7 @@ import heroImage1 from "../../assets/images/header/hero/01.png";
 import heroImage2 from "../../assets/images/header/hero/02.png";
 import heroImage3 from "../../assets/images/header/hero/03.png";
 
-export const Header = () => {
+export const Header: FC = () => {
   // BURGER
   const header = useRef<HTMLElement>(null)
   const [isMenuActive, setMenuActive] = useState(false);
@@ -165,7 +165,7 @@ export const Header = () => {
               <nav className="header__menu menu-header">
                 <ul className="menu-header__list">
                   <li>
-                    <NavLink to="/sets" className="menu-header__link">
+                    <NavLink to="/sets" className="menu-header__link" onClick={() => setMenuActive(false)}>
                       Наборы
                     </NavLink>
                   </li>
@@ -173,7 +173,7 @@ export const Header = () => {
                     className="menu-header__toSub"
                     onClick={(e) => handleSubmenu(e)}
                   >
-                    <NavLink to="/goods" className="menu-header__link">
+                    <NavLink to="/goods" className="menu-header__link" >
                       Все товары
                     </NavLink>
                     <ul
@@ -181,7 +181,7 @@ export const Header = () => {
                         }`}
                     >
                       <li>
-                        <NavLink to="/" className="submenu__link">
+                        <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                           Одежда
                         </NavLink>
                       </li>
@@ -198,52 +198,52 @@ export const Header = () => {
                             }`}
                         >
                           <li>
-                            <NavLink to="/" className="submenu__link">
+                            <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                               -Рюкзак
                             </NavLink>
                           </li>
                           <li>
-                            <NavLink to="/" className="submenu__link">
+                            <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                               -Сумка/Экосумка
                             </NavLink>
                           </li>
                           <li>
-                            <NavLink to="/" className="submenu__link">
+                            <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                               -Бананка
                             </NavLink>
                           </li>
                           <li>
-                            <NavLink to="/" className="submenu__link">
+                            <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                               -Шапка
                             </NavLink>
                           </li>
                           <li>
-                            <NavLink to="/" className="submenu__link">
+                            <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                               -Кепка
                             </NavLink>
                           </li>
                           <li>
-                            <NavLink to="/" className="submenu__link">
+                            <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                               -Маска для сна
                             </NavLink>
                           </li>
                           <li>
-                            <NavLink to="/" className="submenu__link">
+                            <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                               -Защитная маска
                             </NavLink>
                           </li>
                           <li>
-                            <NavLink to="/" className="submenu__link">
+                            <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                               -Значки/Пины
                             </NavLink>
                           </li>
                           <li>
-                            <NavLink to="/" className="submenu__link">
+                            <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                               -Брелки
                             </NavLink>
                           </li>
                           <li>
-                            <NavLink to="/" className="submenu__link">
+                            <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                               -Обложка на паспорт/тревелкейс/кардхолдер
                             </NavLink>
                           </li>
@@ -251,27 +251,27 @@ export const Header = () => {
                       </li>
 
                       <li>
-                        <NavLink to="/" className="submenu__link">
+                        <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                           Для офиса
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink to="/" className="submenu__link">
+                        <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                           Посуда
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink to="/" className="submenu__link">
+                        <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                           Отдых
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink to="/" className="submenu__link">
+                        <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                           Вкусности
                         </NavLink>
                       </li>
                       <li>
-                        <NavLink to="/" className="submenu__link">
+                        <NavLink to="/goods" className="submenu__link" onClick={() => setMenuActive(false)}>
                           Электроника
                         </NavLink>
                       </li>
@@ -279,17 +279,17 @@ export const Header = () => {
                   </li>
 
                   <li>
-                    <NavLink to="/sewing" className="menu-header__link">
+                    <NavLink to="/sewing" className="menu-header__link" onClick={() => setMenuActive(false)}>
                       Пошив
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/production" className="menu-header__link">
+                    <NavLink to="/production" className="menu-header__link" onClick={() => setMenuActive(false)}>
                       Производство
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/information" className="menu-header__link">
+                    <NavLink to="/information" className="menu-header__link" onClick={() => setMenuActive(false)}>
                       Информация
                     </NavLink>
                   </li>

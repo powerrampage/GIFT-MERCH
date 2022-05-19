@@ -1,7 +1,8 @@
+import { FC } from "react"
 import { SewProducts } from "../components/layout/Sewing/SewProducts"
 import '../assets/styles/layout/sewing.scss'
 
-export const Sewing = () => {
+export const Sewing: FC = () => {
   return (
     <main className='sewing'>
       <SewProducts />

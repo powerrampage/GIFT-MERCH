@@ -1,11 +1,12 @@
-import {Heading} from "../../UI/Heading/heading";
+import { FC } from "react";
 import {Link} from "react-router-dom";
+import {Heading} from "../../UI/Heading/heading";
 import {ReactComponent as ArrowLong} from "../../../assets/icons/long-arrow.svg";
 import {ReactComponent as ShoppingBasket} from "../../../assets/icons/shopping-basket.svg";
 import "../../../assets/styles/layout/main/popular.scss"
 import { ReactComponent as Star } from "../../../assets/icons/heading-star.svg";
 
-export const MostPopular = () => {
+export const MostPopular: FC = () => {
   return (
     <section className="main__popular popular">
       <div className="popular__container">

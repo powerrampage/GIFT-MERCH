@@ -1,8 +1,9 @@
+import { FC } from "react"
 import { Form } from "../UI/Form/Form"
 import { Heading } from "../UI/Heading/heading"
 import "../../assets/styles/layout/idea.scss"
 
-export const Idea = () => {
+export const Idea: FC = () => {
   return (
     <section className="main__idea idea">
       <div className="idea__container">

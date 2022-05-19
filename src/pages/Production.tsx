@@ -1,6 +1,7 @@
+import { FC } from 'react'
 import { SewProducts } from '../components/layout/Sewing/SewProducts'
 
-export const Production = () => {
+export const Production: FC = () => {
   return (
     <main className="production">
       <SewProducts />

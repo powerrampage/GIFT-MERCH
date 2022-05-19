@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { MostPopular } from "../components/layout/Main/MostPopular";
 import { Creative } from "../components/layout/Main/Creative";
 import { Finished } from "../components/layout/Main/Finished";
@@ -5,7 +6,7 @@ import { Idea } from "../components/layout/Idea";
 import { Cooperates } from "../components/layout/Main/Cooperates";
 import '../assets/styles/layout/main.scss'
 
-export const Main = () => {
+export const Main: FC = () => {
   return (
     <main className="main">
       <MostPopular />
