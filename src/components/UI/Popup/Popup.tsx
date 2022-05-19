@@ -12,8 +12,6 @@ import "swiper/css/free-mode";
 import "swiper/css/thumbs";
 import { PopupProps } from "./popup.type";
 
-
-
 export const Popup: FC<PopupProps> = ({ product, ariaHidden, setOpenModel }: PopupProps) => {
   const [isActiveAccordion, setIsActiveAccordion] = useState(true);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);

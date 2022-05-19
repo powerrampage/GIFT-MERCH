@@ -1,4 +1,4 @@
-import { FC, PropsWithoutRef, useEffect, useRef } from 'react';
+import { FC, useRef } from 'react';
 // SWIPER
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
@@ -14,7 +14,7 @@ import { ReactComponent as ArrowSlider } from "../../../assets/icons/slider-arro
 import { ProductProps } from "./product.type";
 import { ProductColorType } from "./product.type";
 
-export const Product: React.FC<ProductProps> = ({ item, handleAddCart, openProduct }: ProductProps) => {
+export const Product: FC<ProductProps> = ({ item, handleAddCart, openProduct }: ProductProps) => {
 
   const swiperRef = useRef(null) as any;
   const paginationLabel = useRef<HTMLDivElement>(null)

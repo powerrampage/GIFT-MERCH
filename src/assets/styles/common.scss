@@ -24,6 +24,15 @@
 
 .popup {
 
+  .swiper-slide {
+    @media (max-width: 45.25em){
+      text-align: center;
+      & img {
+        width: 100%;
+      }
+    }
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
     width: rem(40);
@@ -35,6 +44,9 @@
     &:after {
       font-size: rem(20);
       color: #7981AD;
+    }
+    @media (max-width: $xs+em) {
+       display: none;
     }
   }
 
